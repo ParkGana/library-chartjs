@@ -1,5 +1,15 @@
 /* Bar 차트 */
-export const generateBarChartOptions = ({ minX, maxX }: { minX?: string; maxX?: string }) => ({
+export const generateBarChartOptions = ({
+  minX,
+  maxX,
+  minY,
+  maxY
+}: {
+  minX?: string;
+  maxX?: string;
+  minY?: number;
+  maxY?: number;
+}) => ({
   responsive: true,
   maintainAspectRatio: false,
   scales: {
@@ -12,8 +22,8 @@ export const generateBarChartOptions = ({ minX, maxX }: { minX?: string; maxX?: 
         }
       }),
     y: {
-      min: 0,
-      max: 100,
+      min: minY ?? 0,
+      max: maxY ?? 100,
       ticks: {
         stepSize: 20
       }
