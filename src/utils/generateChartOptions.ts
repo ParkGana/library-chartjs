@@ -55,10 +55,18 @@ export const generateLineChartOptions = ({ minX, maxX }: { minX?: string; maxX?:
 });
 
 /* Bar + Line 차트 */
-export const generateBarLineChartOptions = () => ({
+export const generateBarLineChartOptions = ({ minX, maxX }: { minX?: string; maxX?: string }) => ({
   responsive: true,
   maintainAspectRatio: false,
   scales: {
+    ...(minX &&
+      maxX && {
+        x: {
+          type: 'category' as const,
+          min: minX,
+          max: maxX
+        }
+      }),
     y: {
       min: 0,
       max: 100,
