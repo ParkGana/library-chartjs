@@ -34,7 +34,7 @@ const RangeBarLine = () => {
   });
 
   return (
-    <ChartContainer>
+    <ChartContainer label="RANGE">
       <div className="w-full h-full flex">
         <div className="w-6 px-1 py-2" style={{ height: 'calc(100% - 24px)' }}>
           <VerticalRangebar

@@ -33,7 +33,7 @@ const RealtimeSlideBar = () => {
   });
 
   return (
-    <ChartContainer>
+    <ChartContainer label="REALTIME (SLIDE)">
       <Bar data={chartData} options={chartOptions} />
     </ChartContainer>
   );

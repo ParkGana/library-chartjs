@@ -19,7 +19,7 @@ const BasicLine = () => {
   const chartOptions = generateLineChartOptions({});
 
   return (
-    <ChartContainer>
+    <ChartContainer label="BASIC">
       <Line data={chartData} options={chartOptions} />
     </ChartContainer>
   );

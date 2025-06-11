@@ -19,7 +19,7 @@ const BasicBarLine = () => {
   const chartOptions = generateBarLineChartOptions({});
 
   return (
-    <ChartContainer>
+    <ChartContainer label="BASIC">
       <BarLine type="bar" data={chartData} options={chartOptions} />
     </ChartContainer>
   );

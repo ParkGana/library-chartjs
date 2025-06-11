@@ -30,7 +30,7 @@ const RealtimeStackBar = () => {
   const chartOptions = generateBarChartOptions({});
 
   return (
-    <ChartContainer>
+    <ChartContainer label="REALTIME (STACK)">
       <Bar data={chartData} options={chartOptions} />
     </ChartContainer>
   );
