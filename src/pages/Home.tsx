@@ -5,6 +5,7 @@ const HomePage = () => {
     <>
       <Thumbnail type="bar" />
       <Thumbnail type="line" />
+      <Thumbnail type="bar + line" />
     </>
   );
 };
