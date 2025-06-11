@@ -1,5 +1,11 @@
+import Thumbnail from '../components/layout/Thumbnail';
+
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <>
+      <Thumbnail type="bar" />
+    </>
+  );
 };
 
 export default HomePage;

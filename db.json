@@ -1,0 +1,56 @@
+{
+  "bar_A": [
+    {
+      "id": "80ff",
+      "xlabel": "2021",
+      "value": 33
+    },
+    {
+      "id": "84e8",
+      "xlabel": "2022",
+      "value": 19
+    },
+    {
+      "id": "3e1e",
+      "xlabel": "2023",
+      "value": 42
+    },
+    {
+      "id": "f3ae",
+      "xlabel": "2024",
+      "value": 48
+    },
+    {
+      "id": "2c95",
+      "xlabel": "2025",
+      "value": 14
+    }
+  ],
+  "bar_B": [
+    {
+      "id": "589d",
+      "xlabel": "2021",
+      "value": 61
+    },
+    {
+      "id": "89c4",
+      "xlabel": "2022",
+      "value": 66
+    },
+    {
+      "id": "b7e3",
+      "xlabel": "2023",
+      "value": 87
+    },
+    {
+      "id": "6371",
+      "xlabel": "2024",
+      "value": 57
+    },
+    {
+      "id": "5356",
+      "xlabel": "2025",
+      "value": 72
+    }
+  ]
+}
