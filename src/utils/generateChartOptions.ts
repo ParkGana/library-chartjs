@@ -17,3 +17,23 @@ export const generateBarChartOptions = () => ({
     }
   }
 });
+
+/* Line 차트 */
+export const generateLineChartOptions = () => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    y: {
+      min: 0,
+      max: 100,
+      ticks: {
+        stepSize: 20
+      }
+    }
+  },
+  plugins: {
+    legend: {
+      display: false
+    }
+  }
+});

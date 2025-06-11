@@ -52,5 +52,59 @@
       "xlabel": "2025",
       "value": 72
     }
+  ],
+  "line_A": [
+    {
+      "id": "3af7",
+      "xlabel": "2021",
+      "value": 73
+    },
+    {
+      "id": "9f06",
+      "xlabel": "2022",
+      "value": 25
+    },
+    {
+      "id": "87b6",
+      "xlabel": "2023",
+      "value": 75
+    },
+    {
+      "id": "268f",
+      "xlabel": "2024",
+      "value": 55
+    },
+    {
+      "id": "06e1",
+      "xlabel": "2025",
+      "value": 34
+    }
+  ],
+  "line_B": [
+    {
+      "id": "5a5e",
+      "xlabel": "2021",
+      "value": 92
+    },
+    {
+      "id": "7ca0",
+      "xlabel": "2022",
+      "value": 35
+    },
+    {
+      "id": "6963",
+      "xlabel": "2023",
+      "value": 48
+    },
+    {
+      "id": "acab",
+      "xlabel": "2024",
+      "value": 45
+    },
+    {
+      "id": "5a25",
+      "xlabel": "2025",
+      "value": 44
+    }
   ]
 }
