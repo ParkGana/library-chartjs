@@ -25,8 +25,12 @@ const HorizontalRangebar = ({ range, value, step, handleChange }: HorizontalRang
       const stepped = Math.round(rawValue / step) * step;
       const clamped = Math.max(range.min, Math.min(stepped, range.max));
 
-      type === 'min' && clamped < value.max && handleChange({ min: clamped, max: value.max });
-      type === 'max' && clamped > value.min && handleChange({ min: value.min, max: clamped });
+      type === 'min' &&
+        clamped < value.max &&
+        handleChange({ min: Math.min(range.max - 2, value.max - 2, clamped), max: value.max });
+      type === 'max' &&
+        clamped > value.min &&
+        handleChange({ min: value.min, max: Math.max(range.min + 2, value.min + 2, clamped) });
     };
 
     const handleMouseUp = () => {
