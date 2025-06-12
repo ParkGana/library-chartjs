@@ -447,6 +447,130 @@
       "rvalue": 20
     }
   ],
+  "bubble_realtime_A": [
+    {
+      "id": "02a4",
+      "xvalue": 48,
+      "yvalue": 22,
+      "rvalue": 11
+    },
+    {
+      "id": "ede5",
+      "xvalue": 48,
+      "yvalue": 65,
+      "rvalue": 14
+    },
+    {
+      "id": "9fde",
+      "xvalue": 8,
+      "yvalue": 36,
+      "rvalue": 8
+    },
+    {
+      "id": "742a",
+      "xvalue": 48,
+      "yvalue": 15,
+      "rvalue": 16
+    },
+    {
+      "id": "9fca",
+      "xvalue": 25,
+      "yvalue": 36,
+      "rvalue": 17
+    },
+    {
+      "id": "2ba8",
+      "xvalue": 14,
+      "yvalue": 46,
+      "rvalue": 18
+    },
+    {
+      "id": "3d12",
+      "xvalue": 73,
+      "yvalue": 28,
+      "rvalue": 20
+    },
+    {
+      "id": "9b78",
+      "xvalue": 40,
+      "yvalue": 90,
+      "rvalue": 7
+    },
+    {
+      "id": "f5d5",
+      "xvalue": 55,
+      "yvalue": 86,
+      "rvalue": 16
+    },
+    {
+      "id": "36ae",
+      "xvalue": 44,
+      "yvalue": 7,
+      "rvalue": 7
+    }
+  ],
+  "bubble_realtime_B": [
+    {
+      "id": "2ad8",
+      "xvalue": 88,
+      "yvalue": 87,
+      "rvalue": 9
+    },
+    {
+      "id": "51bb",
+      "xvalue": 77,
+      "yvalue": 34,
+      "rvalue": 13
+    },
+    {
+      "id": "9360",
+      "xvalue": 82,
+      "yvalue": 39,
+      "rvalue": 15
+    },
+    {
+      "id": "c832",
+      "xvalue": 64,
+      "yvalue": 35,
+      "rvalue": 11
+    },
+    {
+      "id": "36ae",
+      "xvalue": 48,
+      "yvalue": 100,
+      "rvalue": 17
+    },
+    {
+      "id": "2a50",
+      "xvalue": 12,
+      "yvalue": 35,
+      "rvalue": 6
+    },
+    {
+      "id": "67d0",
+      "xvalue": 43,
+      "yvalue": 88,
+      "rvalue": 15
+    },
+    {
+      "id": "673a",
+      "xvalue": 59,
+      "yvalue": 7,
+      "rvalue": 19
+    },
+    {
+      "id": "4273",
+      "xvalue": 30,
+      "yvalue": 34,
+      "rvalue": 12
+    },
+    {
+      "id": "ebc6",
+      "xvalue": 82,
+      "yvalue": 36,
+      "rvalue": 17
+    }
+  ],
   "doughnut": [
     {
       "id": "0318",
