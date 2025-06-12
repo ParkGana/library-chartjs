@@ -1,15 +1,13 @@
+import type {
+  AreaChartOptionsType,
+  BarChartOptionsType,
+  BarLineChartOptionsType,
+  LineChartOptionsType,
+  ScatterChartOptionsType
+} from '../types/chartOptionsType';
+
 /* Area 차트 */
-export const generateAreaChartOptions = ({
-  minX,
-  maxX,
-  minY,
-  maxY
-}: {
-  minX?: string;
-  maxX?: string;
-  minY?: number;
-  maxY?: number;
-}) => ({
+export const generateAreaChartOptions = ({ minX, maxX, minY, maxY }: AreaChartOptionsType) => ({
   responsive: true,
   maintainAspectRatio: false,
   scales: {
@@ -37,17 +35,7 @@ export const generateAreaChartOptions = ({
 });
 
 /* Bar 차트 */
-export const generateBarChartOptions = ({
-  minX,
-  maxX,
-  minY,
-  maxY
-}: {
-  minX?: string;
-  maxX?: string;
-  minY?: number;
-  maxY?: number;
-}) => ({
+export const generateBarChartOptions = ({ minX, maxX, minY, maxY }: BarChartOptionsType) => ({
   responsive: true,
   maintainAspectRatio: false,
   scales: {
@@ -86,17 +74,7 @@ export const generateDoughnutChartOptions = () => ({
 });
 
 /* Line 차트 */
-export const generateLineChartOptions = ({
-  minX,
-  maxX,
-  minY,
-  maxY
-}: {
-  minX?: string;
-  maxX?: string;
-  minY?: number;
-  maxY?: number;
-}) => ({
+export const generateLineChartOptions = ({ minX, maxX, minY, maxY }: LineChartOptionsType) => ({
   responsive: true,
   maintainAspectRatio: false,
   scales: {
@@ -135,17 +113,7 @@ export const generatePieChartOptions = () => ({
 });
 
 /* Scatter 차트 */
-export const generateScatterChartOptions = ({
-  minX,
-  maxX,
-  minY,
-  maxY
-}: {
-  minX?: number;
-  maxX?: number;
-  minY?: number;
-  maxY?: number;
-}) => ({
+export const generateScatterChartOptions = ({ minX, maxX, minY, maxY }: ScatterChartOptionsType) => ({
   responsive: true,
   maintainAspectRatio: false,
   scales: {
@@ -172,17 +140,7 @@ export const generateScatterChartOptions = ({
 });
 
 /* Bar + Line 차트 */
-export const generateBarLineChartOptions = ({
-  minX,
-  maxX,
-  minY,
-  maxY
-}: {
-  minX?: string;
-  maxX?: string;
-  minY?: number;
-  maxY?: number;
-}) => ({
+export const generateBarLineChartOptions = ({ minX, maxX, minY, maxY }: BarLineChartOptionsType) => ({
   responsive: true,
   maintainAspectRatio: false,
   scales: {
