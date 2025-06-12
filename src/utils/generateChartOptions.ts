@@ -1,8 +1,16 @@
 /* Area 차트 */
-export const generateAreaChartOptions = () => ({
+export const generateAreaChartOptions = ({ minX, maxX }: { minX?: string; maxX?: string }) => ({
   responsive: true,
   maintainAspectRatio: false,
   scales: {
+    ...(minX &&
+      maxX && {
+        x: {
+          type: 'category' as const,
+          min: minX,
+          max: maxX
+        }
+      }),
     y: {
       min: 0,
       max: 100,
