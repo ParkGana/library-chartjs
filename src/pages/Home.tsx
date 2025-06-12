@@ -3,6 +3,7 @@ import Thumbnail from '../components/layout/Thumbnail';
 const HomePage = () => {
   return (
     <>
+      <Thumbnail type="area" />
       <Thumbnail type="bar" />
       <Thumbnail type="line" />
       <Thumbnail type="bar + line" />

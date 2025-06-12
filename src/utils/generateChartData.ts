@@ -1,7 +1,23 @@
-import { Color } from '../styles/color';
+import { Color, PaleColor } from '../styles/color';
+import type { AreaChartDataType } from '../types/areaType';
 import type { BarLineChartDataType } from '../types/barlineType';
 import type { BarChartDataType } from '../types/barType';
 import type { LineChartDataType } from '../types/lineType';
+
+/* Area 차트 */
+export const generateAreaChartData = (data: AreaChartDataType[]) => ({
+  labels: data[0].data.map(({ xlabel }) => xlabel),
+  datasets: data.map(({ name, data }, index) => ({
+    label: name,
+    data: data.map(({ value }) => value),
+    fill: true,
+    backgroundColor: PaleColor[index],
+    borderColor: Color[index],
+    borderWidth: 2,
+    pointRadius: 0,
+    tension: 0.3
+  }))
+});
 
 /* Bar 차트 */
 export const generateBarChartData = (data: BarChartDataType[]) => ({

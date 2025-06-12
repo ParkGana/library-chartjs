@@ -1,4 +1,58 @@
 {
+  "area_A": [
+    {
+      "id": "0c53",
+      "xlabel": "2021",
+      "value": 54
+    },
+    {
+      "id": "cb3b",
+      "xlabel": "2022",
+      "value": 32
+    },
+    {
+      "id": "deea",
+      "xlabel": "2023",
+      "value": 10
+    },
+    {
+      "id": "464c",
+      "xlabel": "2024",
+      "value": 95
+    },
+    {
+      "id": "ba47",
+      "xlabel": "2025",
+      "value": 8
+    }
+  ],
+  "area_B": [
+    {
+      "id": "fb33",
+      "xlabel": "2021",
+      "value": 100
+    },
+    {
+      "id": "a6fc",
+      "xlabel": "2022",
+      "value": 72
+    },
+    {
+      "id": "c5b2",
+      "xlabel": "2023",
+      "value": 73
+    },
+    {
+      "id": "28ec",
+      "xlabel": "2024",
+      "value": 25
+    },
+    {
+      "id": "d0c4",
+      "xlabel": "2025",
+      "value": 10
+    }
+  ],
   "bar_A": [
     {
       "id": "80ff",
