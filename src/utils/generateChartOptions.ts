@@ -2,6 +2,7 @@ import type {
   AreaChartOptionsType,
   BarChartOptionsType,
   BarLineChartOptionsType,
+  BubbleChartOptionsType,
   LineChartOptionsType,
   ScatterChartOptionsType
 } from '../types/chartOptionsType';
@@ -63,20 +64,20 @@ export const generateBarChartOptions = ({ minX, maxX, minY, maxY }: BarChartOpti
 });
 
 /* Bubble 차트 */
-export const generateBubbleChartOptions = () => ({
+export const generateBubbleChartOptions = ({ minX, maxX, minY, maxY }: BubbleChartOptionsType) => ({
   responsive: true,
   maintainAspectRatio: false,
   scales: {
     x: {
-      min: 0,
-      max: 100,
+      min: minX ?? 0,
+      max: maxX ?? 100,
       ticks: {
         stepSize: 20
       }
     },
     y: {
-      min: 0,
-      max: 100,
+      min: minY ?? 0,
+      max: maxY ?? 100,
       ticks: {
         stepSize: 20
       }

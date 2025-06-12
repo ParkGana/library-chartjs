@@ -27,7 +27,7 @@ const RealtimeBubble = () => {
   if (isError) return <div>Error...</div>;
 
   const chartData = generateBubbleChartData(data);
-  const chartOptions = generateBubbleChartOptions();
+  const chartOptions = generateBubbleChartOptions({});
 
   return (
     <ChartContainer label="REALTIME">

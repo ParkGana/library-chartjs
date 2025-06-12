@@ -16,7 +16,7 @@ const BasicBubble = () => {
   if (isError) return <div>Error...</div>;
 
   const chartData = generateBubbleChartData(data);
-  const chartOptions = generateBubbleChartOptions();
+  const chartOptions = generateBubbleChartOptions({});
 
   return (
     <ChartContainer label="BASIC">
