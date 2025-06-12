@@ -3,6 +3,7 @@ import type {
   AreaChartDataType,
   BarChartDataType,
   BarLineChartDataType,
+  BubbleChartDataType,
   DoughnutChartDataType,
   LineChartDataType,
   PieChartDataType,
@@ -31,6 +32,16 @@ export const generateBarChartData = (data: BarChartDataType[]) => ({
     label: name,
     data: data.map(({ value }) => value),
     backgroundColor: Color[index]
+  }))
+});
+
+/* Bubble 차트 */
+export const generateBubbleChartData = (data: BubbleChartDataType[]) => ({
+  datasets: data.map(({ name, data }, index) => ({
+    label: name,
+    data: data.map(({ xvalue, yvalue, rvalue }) => ({ x: xvalue, y: yvalue, r: rvalue })),
+    backgroundColor: PaleColor[index],
+    borderWidth: 0
   }))
 });
 

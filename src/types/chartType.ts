@@ -16,6 +16,16 @@ export type BarChartDataType = {
   }[];
 };
 
+/* Bubble 차트 */
+export type BubbleChartDataType = {
+  name: string;
+  data: {
+    xvalue: number;
+    yvalue: number;
+    rvalue: number;
+  }[];
+};
+
 /* Doughnut 차트 */
 export type DoughnutChartDataType = {
   name: string;

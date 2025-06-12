@@ -323,6 +323,130 @@
       "value": 14
     }
   ],
+  "bubble_A": [
+    {
+      "id": "86ab",
+      "xvalue": 60,
+      "yvalue": 32,
+      "rvalue": 17
+    },
+    {
+      "id": "18b2",
+      "xvalue": 21,
+      "yvalue": 96,
+      "rvalue": 18
+    },
+    {
+      "id": "7311",
+      "xvalue": 86,
+      "yvalue": 16,
+      "rvalue": 16
+    },
+    {
+      "id": "801e",
+      "xvalue": 100,
+      "yvalue": 22,
+      "rvalue": 12
+    },
+    {
+      "id": "cc58",
+      "xvalue": 46,
+      "yvalue": 32,
+      "rvalue": 14
+    },
+    {
+      "id": "5694",
+      "xvalue": 20,
+      "yvalue": 19,
+      "rvalue": 6
+    },
+    {
+      "id": "a9b0",
+      "xvalue": 36,
+      "yvalue": 77,
+      "rvalue": 6
+    },
+    {
+      "id": "1ff9",
+      "xvalue": 15,
+      "yvalue": 24,
+      "rvalue": 16
+    },
+    {
+      "id": "3c61",
+      "xvalue": 20,
+      "yvalue": 73,
+      "rvalue": 18
+    },
+    {
+      "id": "ae74",
+      "xvalue": 56,
+      "yvalue": 35,
+      "rvalue": 18
+    }
+  ],
+  "bubble_B": [
+    {
+      "id": "882a",
+      "xvalue": 24,
+      "yvalue": 40,
+      "rvalue": 15
+    },
+    {
+      "id": "a0be",
+      "xvalue": 51,
+      "yvalue": 8,
+      "rvalue": 16
+    },
+    {
+      "id": "db81",
+      "xvalue": 68,
+      "yvalue": 88,
+      "rvalue": 6
+    },
+    {
+      "id": "943a",
+      "xvalue": 67,
+      "yvalue": 83,
+      "rvalue": 11
+    },
+    {
+      "id": "9493",
+      "xvalue": 18,
+      "yvalue": 92,
+      "rvalue": 6
+    },
+    {
+      "id": "c96c",
+      "xvalue": 54,
+      "yvalue": 41,
+      "rvalue": 6
+    },
+    {
+      "id": "4997",
+      "xvalue": 33,
+      "yvalue": 51,
+      "rvalue": 15
+    },
+    {
+      "id": "1a77",
+      "xvalue": 83,
+      "yvalue": 72,
+      "rvalue": 14
+    },
+    {
+      "id": "1cc6",
+      "xvalue": 98,
+      "yvalue": 6,
+      "rvalue": 12
+    },
+    {
+      "id": "693b",
+      "xvalue": 92,
+      "yvalue": 1,
+      "rvalue": 20
+    }
+  ],
   "doughnut": [
     {
       "id": "0318",

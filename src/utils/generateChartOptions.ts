@@ -62,6 +62,33 @@ export const generateBarChartOptions = ({ minX, maxX, minY, maxY }: BarChartOpti
   }
 });
 
+/* Bubble 차트 */
+export const generateBubbleChartOptions = () => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    x: {
+      min: 0,
+      max: 100,
+      ticks: {
+        stepSize: 20
+      }
+    },
+    y: {
+      min: 0,
+      max: 100,
+      ticks: {
+        stepSize: 20
+      }
+    }
+  },
+  plugins: {
+    legend: {
+      display: false
+    }
+  }
+});
+
 /* Doughnut 차트 */
 export const generateDoughnutChartOptions = () => ({
   responsive: true,

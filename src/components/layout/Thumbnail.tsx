@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { useNavigate } from 'react-router-dom';
 
 type ThumbnailProps = {
-  type: 'area' | 'bar' | 'doughnut' | 'line' | 'pie' | 'scatter' | 'bar + line';
+  type: 'area' | 'bar' | 'bubble' | 'doughnut' | 'line' | 'pie' | 'scatter' | 'bar + line';
 };
 
 const Thumbnail = ({ type }: ThumbnailProps) => {

@@ -14,6 +14,9 @@ export type BarChartOptionsType = {
   maxY?: number;
 };
 
+/* Bubble 차트 */
+export type BubbleChartOptionsType = {};
+
 /* Doughnut 차트 */
 export type DoughnutChartOptionsType = {};
 
