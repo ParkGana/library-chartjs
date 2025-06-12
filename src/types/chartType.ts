@@ -52,3 +52,12 @@ export type BarLineChartDataType = {
   }[];
   type: 'bar' | 'line';
 };
+
+/* Scatter 차트 */
+export type ScatterChartDataType = {
+  name: string;
+  data: {
+    x: number;
+    y: number;
+  }[];
+};

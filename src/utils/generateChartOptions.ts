@@ -134,6 +134,33 @@ export const generatePieChartOptions = () => ({
   }
 });
 
+/* Scatter 차트 */
+export const generateScatterChartOptions = () => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    x: {
+      min: 0,
+      max: 100,
+      ticks: {
+        stepSize: 20
+      }
+    },
+    y: {
+      min: 0,
+      max: 100,
+      ticks: {
+        stepSize: 20
+      }
+    }
+  },
+  plugins: {
+    legend: {
+      display: false
+    }
+  }
+});
+
 /* Bar + Line 차트 */
 export const generateBarLineChartOptions = ({
   minX,

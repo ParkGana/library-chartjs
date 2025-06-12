@@ -5,7 +5,8 @@ import type {
   BarLineChartDataType,
   DoughnutChartDataType,
   LineChartDataType,
-  PieChartDataType
+  PieChartDataType,
+  ScatterChartDataType
 } from '../types/chartType';
 
 /* Area 차트 */
@@ -70,6 +71,15 @@ export const generatePieChartData = (data: PieChartDataType[]) => ({
       borderWidth: 0
     }
   ]
+});
+
+/* Scatter 차트 */
+export const generateScatterChartData = (data: ScatterChartDataType[]) => ({
+  datasets: data.map(({ name, data }, index) => ({
+    label: name,
+    data,
+    backgroundColor: Color[index]
+  }))
 });
 
 /* Bar + Line 차트 */
