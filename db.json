@@ -511,5 +511,32 @@
       "name": "E",
       "value": 82
     }
+  ],
+  "pie_realtime": [
+    {
+      "id": "cdfe",
+      "name": "A",
+      "value": 67
+    },
+    {
+      "id": "7774",
+      "name": "B",
+      "value": 88
+    },
+    {
+      "id": "58b3",
+      "name": "C",
+      "value": 40
+    },
+    {
+      "id": "14b3",
+      "name": "D",
+      "value": 5
+    },
+    {
+      "id": "effe",
+      "name": "E",
+      "value": 35
+    }
   ]
 }
