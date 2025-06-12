@@ -350,6 +350,33 @@
       "value": 15
     }
   ],
+  "doughnut_realtime": [
+    {
+      "id": "e9d7",
+      "name": "A",
+      "value": 54
+    },
+    {
+      "id": "bf21",
+      "name": "B",
+      "value": 25
+    },
+    {
+      "id": "b5ca",
+      "name": "C",
+      "value": 92
+    },
+    {
+      "id": "9b9c",
+      "name": "D",
+      "value": 75
+    },
+    {
+      "id": "c35d",
+      "name": "E",
+      "value": 67
+    }
+  ],
   "line_A": [
     {
       "id": "3af7",
