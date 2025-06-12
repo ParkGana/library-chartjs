@@ -4,6 +4,7 @@ import BarChartPage from './pages/Bar';
 import LineChartPage from './pages/Line';
 import BarLineChartPage from './pages/BarLine';
 import AreaChartPage from './pages/Area';
+import PieChartPage from './pages/Pie';
 
 const Router = () => {
   return (
@@ -12,6 +13,7 @@ const Router = () => {
       <Route path="/area" element={<AreaChartPage />} />
       <Route path="/bar" element={<BarChartPage />} />
       <Route path="/line" element={<LineChartPage />} />
+      <Route path="/pie" element={<PieChartPage />} />
       <Route path="/barline" element={<BarLineChartPage />} />
 
       <Route path="*" element={<Navigate to="/" replace />} />

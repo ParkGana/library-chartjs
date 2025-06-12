@@ -112,6 +112,17 @@ export const generateLineChartOptions = ({
   }
 });
 
+/* Pie 차트 */
+export const generatePieChartOptions = () => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      display: false
+    }
+  }
+});
+
 /* Bar + Line 차트 */
 export const generateBarLineChartOptions = ({
   minX,

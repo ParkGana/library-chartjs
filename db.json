@@ -484,5 +484,32 @@
       "xlabel": "5",
       "value": 28
     }
+  ],
+  "pie": [
+    {
+      "id": "9277",
+      "name": "A",
+      "value": 44
+    },
+    {
+      "id": "2929",
+      "name": "B",
+      "value": 82
+    },
+    {
+      "id": "e334",
+      "name": "C",
+      "value": 94
+    },
+    {
+      "id": "8296",
+      "name": "D",
+      "value": 11
+    },
+    {
+      "id": "deac",
+      "name": "E",
+      "value": 82
+    }
   ]
 }

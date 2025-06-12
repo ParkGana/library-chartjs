@@ -3,6 +3,7 @@ import type { AreaChartDataType } from '../types/areaType';
 import type { BarLineChartDataType } from '../types/barlineType';
 import type { BarChartDataType } from '../types/barType';
 import type { LineChartDataType } from '../types/lineType';
+import type { PieChartDataType } from '../types/pieType';
 
 /* Area 차트 */
 export const generateAreaChartData = (data: AreaChartDataType[]) => ({
@@ -42,6 +43,18 @@ export const generateLineChartData = (data: LineChartDataType[]) => ({
     pointHoverRadius: 3,
     tension: 0
   }))
+});
+
+/* Pie 차트 */
+export const generatePieChartData = (data: PieChartDataType[]) => ({
+  labels: data.map(({ name }) => name),
+  datasets: [
+    {
+      data: data.map(({ value }) => value),
+      backgroundColor: Color.slice(0, data.length),
+      borderWidth: 0
+    }
+  ]
 });
 
 /* Bar + Line 차트 */
