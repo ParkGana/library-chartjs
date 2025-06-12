@@ -77,7 +77,7 @@ export const generatePieChartData = (data: PieChartDataType[]) => ({
 export const generateScatterChartData = (data: ScatterChartDataType[]) => ({
   datasets: data.map(({ name, data }, index) => ({
     label: name,
-    data,
+    data: data.map(({ xvalue, yvalue }) => ({ x: xvalue, y: yvalue })),
     backgroundColor: Color[index]
   }))
 });

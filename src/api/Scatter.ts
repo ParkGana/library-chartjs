@@ -29,12 +29,12 @@ export const fetchScatterChartRealtimeDataAPI = async (): Promise<ScatterChartDa
 export const createScatterChartRealtimeDataAPI = async (): Promise<void> => {
   await Promise.all([
     axios.post(`${API_URL}/scatter_realtime_A`, {
-      x: faker.number.int({ min: 0, max: 100 }),
-      y: faker.number.int({ min: 0, max: 100 })
+      xvalue: faker.number.int({ min: 0, max: 100 }),
+      yvalue: faker.number.int({ min: 0, max: 100 })
     }),
     axios.post(`${API_URL}/scatter_realtime_B`, {
-      x: faker.number.int({ min: 0, max: 100 }),
-      y: faker.number.int({ min: 0, max: 100 })
+      xvalue: faker.number.int({ min: 0, max: 100 }),
+      yvalue: faker.number.int({ min: 0, max: 100 })
     })
   ]);
 };

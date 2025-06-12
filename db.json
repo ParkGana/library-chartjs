@@ -596,209 +596,209 @@
   "scatter_A": [
     {
       "id": "a966",
-      "x": 22,
-      "y": 29
+      "xvalue": 22,
+      "yvalue": 29
     },
     {
       "id": "aa66",
-      "x": 47,
-      "y": 57
+      "xvalue": 47,
+      "yvalue": 57
     },
     {
       "id": "5988",
-      "x": 51,
-      "y": 66
+      "xvalue": 51,
+      "yvalue": 66
     },
     {
       "id": "76d1",
-      "x": 85,
-      "y": 76
+      "xvalue": 85,
+      "yvalue": 76
     },
     {
       "id": "6d9c",
-      "x": 54,
-      "y": 35
+      "xvalue": 54,
+      "yvalue": 35
     },
     {
       "id": "12e0",
-      "x": 9,
-      "y": 50
+      "xvalue": 9,
+      "yvalue": 50
     },
     {
       "id": "c099",
-      "x": 13,
-      "y": 3
+      "xvalue": 13,
+      "yvalue": 3
     },
     {
       "id": "f124",
-      "x": 37,
-      "y": 68
+      "xvalue": 37,
+      "yvalue": 68
     },
     {
       "id": "6e0c",
-      "x": 68,
-      "y": 36
+      "xvalue": 68,
+      "yvalue": 36
     },
     {
       "id": "5d45",
-      "x": 75,
-      "y": 14
+      "xvalue": 75,
+      "yvalue": 14
     }
   ],
   "scatter_B": [
     {
       "id": "e38e",
-      "x": 40,
-      "y": 66
+      "xvalue": 40,
+      "yvalue": 66
     },
     {
       "id": "e41c",
-      "x": 60,
-      "y": 32
+      "xvalue": 60,
+      "yvalue": 32
     },
     {
       "id": "1929",
-      "x": 86,
-      "y": 7
+      "xvalue": 86,
+      "yvalue": 7
     },
     {
       "id": "032a",
-      "x": 44,
-      "y": 95
+      "xvalue": 44,
+      "yvalue": 95
     },
     {
       "id": "4b11",
-      "x": 36,
-      "y": 10
+      "xvalue": 36,
+      "yvalue": 10
     },
     {
       "id": "bca8",
-      "x": 83,
-      "y": 58
+      "xvalue": 83,
+      "yvalue": 58
     },
     {
       "id": "c4dd",
-      "x": 73,
-      "y": 94
+      "xvalue": 73,
+      "yvalue": 94
     },
     {
       "id": "99ce",
-      "x": 39,
-      "y": 74
+      "xvalue": 39,
+      "yvalue": 74
     },
     {
       "id": "87bb",
-      "x": 57,
-      "y": 52
+      "xvalue": 57,
+      "yvalue": 52
     },
     {
       "id": "570d",
-      "x": 3,
-      "y": 22
+      "xvalue": 3,
+      "yvalue": 22
     }
   ],
   "scatter_realtime_A": [
     {
       "id": "8645",
-      "x": 79,
-      "y": 34
+      "xvalue": 79,
+      "yvalue": 34
     },
     {
       "id": "98fe",
-      "x": 3,
-      "y": 69
+      "xvalue": 3,
+      "yvalue": 69
     },
     {
       "id": "b7d1",
-      "x": 16,
-      "y": 71
+      "xvalue": 16,
+      "yvalue": 71
     },
     {
       "id": "8b41",
-      "x": 30,
-      "y": 24
+      "xvalue": 30,
+      "yvalue": 24
     },
     {
       "id": "5f22",
-      "x": 31,
-      "y": 96
+      "xvalue": 31,
+      "yvalue": 96
     },
     {
       "id": "d516",
-      "x": 7,
-      "y": 46
+      "xvalue": 7,
+      "yvalue": 46
     },
     {
       "id": "8bbe",
-      "x": 70,
-      "y": 18
+      "xvalue": 70,
+      "yvalue": 18
     },
     {
       "id": "812b",
-      "x": 87,
-      "y": 31
+      "xvalue": 87,
+      "yvalue": 31
     },
     {
       "id": "616e",
-      "x": 98,
-      "y": 24
+      "xvalue": 98,
+      "yvalue": 24
     },
     {
       "id": "b9be",
-      "x": 28,
-      "y": 79
+      "xvalue": 28,
+      "yvalue": 79
     }
   ],
   "scatter_realtime_B": [
     {
       "id": "38c1",
-      "x": 54,
-      "y": 41
+      "xvalue": 54,
+      "yvalue": 41
     },
     {
       "id": "124a",
-      "x": 97,
-      "y": 94
+      "xvalue": 97,
+      "yvalue": 94
     },
     {
       "id": "42f3",
-      "x": 62,
-      "y": 28
+      "xvalue": 62,
+      "yvalue": 28
     },
     {
       "id": "2815",
-      "x": 37,
-      "y": 68
+      "xvalue": 37,
+      "yvalue": 68
     },
     {
       "id": "6e00",
-      "x": 46,
-      "y": 66
+      "xvalue": 46,
+      "yvalue": 66
     },
     {
       "id": "694b",
-      "x": 81,
-      "y": 86
+      "xvalue": 81,
+      "yvalue": 86
     },
     {
       "id": "f864",
-      "x": 15,
-      "y": 48
+      "xvalue": 15,
+      "yvalue": 48
     },
     {
       "id": "e257",
-      "x": 24,
-      "y": 72
+      "xvalue": 24,
+      "yvalue": 72
     },
     {
       "id": "860e",
-      "x": 24,
-      "y": 8
+      "xvalue": 24,
+      "yvalue": 8
     },
     {
       "id": "5953",
-      "x": 57,
-      "y": 20
+      "xvalue": 57,
+      "yvalue": 20
     }
   ]
 }
