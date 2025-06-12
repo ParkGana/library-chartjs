@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { faker } from '@faker-js/faker';
-import type { PieChartDataType } from '../types/pieType';
+import type { PieChartDataType } from '../types/chartType';
 
 const API_URL = 'http://localhost:4000';
 

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { faker } from '@faker-js/faker';
-import type { AreaChartDataType } from '../types/areaType';
+import type { AreaChartDataType } from '../types/chartType';
 
 const API_URL = 'http://localhost:4000';
 

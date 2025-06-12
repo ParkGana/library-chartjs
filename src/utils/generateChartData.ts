@@ -1,9 +1,11 @@
 import { Color, PaleColor } from '../styles/color';
-import type { AreaChartDataType } from '../types/areaType';
-import type { BarLineChartDataType } from '../types/barlineType';
-import type { BarChartDataType } from '../types/barType';
-import type { LineChartDataType } from '../types/lineType';
-import type { PieChartDataType } from '../types/pieType';
+import type {
+  AreaChartDataType,
+  BarChartDataType,
+  BarLineChartDataType,
+  LineChartDataType,
+  PieChartDataType
+} from '../types/chartType';
 
 /* Area 차트 */
 export const generateAreaChartData = (data: AreaChartDataType[]) => ({
