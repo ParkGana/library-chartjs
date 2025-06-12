@@ -135,20 +135,30 @@ export const generatePieChartOptions = () => ({
 });
 
 /* Scatter 차트 */
-export const generateScatterChartOptions = () => ({
+export const generateScatterChartOptions = ({
+  minX,
+  maxX,
+  minY,
+  maxY
+}: {
+  minX?: number;
+  maxX?: number;
+  minY?: number;
+  maxY?: number;
+}) => ({
   responsive: true,
   maintainAspectRatio: false,
   scales: {
     x: {
-      min: 0,
-      max: 100,
+      min: minX ?? 0,
+      max: maxX ?? 100,
       ticks: {
         stepSize: 20
       }
     },
     y: {
-      min: 0,
-      max: 100,
+      min: minY ?? 0,
+      max: maxY ?? 100,
       ticks: {
         stepSize: 20
       }

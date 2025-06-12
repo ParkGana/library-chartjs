@@ -1,4 +1,5 @@
 import BasicScatter from '../components/chart/scatter/Basic';
+import RangeScatter from '../components/chart/scatter/Range';
 import RealtimeScatter from '../components/chart/scatter/Realtime';
 
 const ScatterChartPage = () => {
@@ -6,6 +7,7 @@ const ScatterChartPage = () => {
     <>
       <BasicScatter />
       <RealtimeScatter />
+      <RangeScatter />
     </>
   );
 };

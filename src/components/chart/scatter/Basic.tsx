@@ -16,7 +16,7 @@ const BasicScatter = () => {
   if (isError) return <div>Error...</div>;
 
   const chartData = generateScatterChartData(data);
-  const chartOptions = generateScatterChartOptions();
+  const chartOptions = generateScatterChartOptions({});
 
   return (
     <ChartContainer label="BASIC">
