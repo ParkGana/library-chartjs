@@ -5,6 +5,7 @@ const HomePage = () => {
     <>
       <Thumbnail type="area" />
       <Thumbnail type="bar" />
+      <Thumbnail type="doughnut" />
       <Thumbnail type="line" />
       <Thumbnail type="pie" />
       <Thumbnail type="bar + line" />

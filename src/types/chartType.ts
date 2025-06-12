@@ -18,6 +18,13 @@ export type BarChartDataType = {
   }[];
 };
 
+/* Doughnut 차트 */
+export type DoughnutChartDataType = {
+  id: string;
+  name: string;
+  value: number;
+};
+
 /* Line 차트 */
 export type LineChartDataType = {
   name: string;

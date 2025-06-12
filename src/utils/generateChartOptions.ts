@@ -74,6 +74,17 @@ export const generateBarChartOptions = ({
   }
 });
 
+/* Doughnut 차트 */
+export const generateDoughnutChartOptions = () => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      display: false
+    }
+  }
+});
+
 /* Line 차트 */
 export const generateLineChartOptions = ({
   minX,

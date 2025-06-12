@@ -12,7 +12,7 @@ const Breadcrumb = () => {
       {pathname !== '/' && (
         <>
           <FaAngleRight />
-          <BreadcrumbSelectbox options={['area', 'bar', 'line', 'pie', 'bar + line']} />
+          <BreadcrumbSelectbox options={['area', 'bar', 'doughnut', 'line', 'pie', 'bar + line']} />
         </>
       )}
     </div>

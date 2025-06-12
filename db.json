@@ -323,6 +323,33 @@
       "value": 14
     }
   ],
+  "doughnut": [
+    {
+      "id": "0318",
+      "name": "A",
+      "value": 57
+    },
+    {
+      "id": "3c3f",
+      "name": "B",
+      "value": 30
+    },
+    {
+      "id": "c15e",
+      "name": "C",
+      "value": 97
+    },
+    {
+      "id": "2349",
+      "name": "D",
+      "value": 74
+    },
+    {
+      "id": "e2be",
+      "name": "E",
+      "value": 15
+    }
+  ],
   "line_A": [
     {
       "id": "3af7",

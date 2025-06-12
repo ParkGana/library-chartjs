@@ -3,6 +3,7 @@ import type {
   AreaChartDataType,
   BarChartDataType,
   BarLineChartDataType,
+  DoughnutChartDataType,
   LineChartDataType,
   PieChartDataType
 } from '../types/chartType';
@@ -30,6 +31,18 @@ export const generateBarChartData = (data: BarChartDataType[]) => ({
     data: data.map(({ value }) => value),
     backgroundColor: Color[index]
   }))
+});
+
+/* Doughnut 차트 */
+export const generateDoughnutChartData = (data: DoughnutChartDataType[]) => ({
+  labels: data.map(({ name }) => name),
+  datasets: [
+    {
+      data: data.map(({ value }) => value),
+      backgroundColor: Color.slice(0, data.length),
+      borderWidth: 0
+    }
+  ]
 });
 
 /* Line 차트 */
