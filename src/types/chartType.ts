@@ -2,6 +2,7 @@
 export type AreaChartDataType = {
   name: string;
   data: {
+    id: string;
     xlabel: string;
     value: number;
   }[];
@@ -11,6 +12,7 @@ export type AreaChartDataType = {
 export type BarChartDataType = {
   name: string;
   data: {
+    id: string;
     xlabel: string;
     value: number;
   }[];
@@ -20,6 +22,7 @@ export type BarChartDataType = {
 export type BubbleChartDataType = {
   name: string;
   data: {
+    id: string;
     xvalue: number;
     yvalue: number;
     rvalue: number;
@@ -28,6 +31,7 @@ export type BubbleChartDataType = {
 
 /* Doughnut 차트 */
 export type DoughnutChartDataType = {
+  id: string;
   name: string;
   value: number;
 };
@@ -36,6 +40,7 @@ export type DoughnutChartDataType = {
 export type LineChartDataType = {
   name: string;
   data: {
+    id: string;
     xlabel: string;
     value: number;
   }[];
@@ -43,6 +48,7 @@ export type LineChartDataType = {
 
 /* Pie 차트 */
 export type PieChartDataType = {
+  id: string;
   name: string;
   value: number;
 };
@@ -51,6 +57,7 @@ export type PieChartDataType = {
 export type BarLineChartDataType = {
   name: string;
   data: {
+    id: string;
     xlabel: string;
     value: number;
   }[];
@@ -61,6 +68,7 @@ export type BarLineChartDataType = {
 export type ScatterChartDataType = {
   name: string;
   data: {
+    id: string;
     xvalue: number;
     yvalue: number;
   }[];
