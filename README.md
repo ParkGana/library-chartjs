@@ -1,1 +1,1 @@
-# library-chartjs
+# react-chartjs
