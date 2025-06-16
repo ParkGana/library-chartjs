@@ -868,6 +868,33 @@
       "value": 49
     }
   ],
+  "polar_realtime": [
+    {
+      "id": "5cec",
+      "name": "A",
+      "value": 74
+    },
+    {
+      "id": "76ab",
+      "name": "B",
+      "value": 96
+    },
+    {
+      "id": "b67c",
+      "name": "C",
+      "value": 63
+    },
+    {
+      "id": "f1d6",
+      "name": "D",
+      "value": 74
+    },
+    {
+      "id": "517a",
+      "name": "E",
+      "value": 26
+    }
+  ],
   "radar_A": [
     {
       "id": "e613",
