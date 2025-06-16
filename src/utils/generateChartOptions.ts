@@ -140,6 +140,26 @@ export const generatePieChartOptions = () => ({
   }
 });
 
+/* Radar 차트 */
+export const generateRadarChartOptions = () => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    r: {
+      min: 0,
+      max: 100,
+      ticks: {
+        stepSize: 20
+      }
+    }
+  },
+  plugins: {
+    legend: {
+      display: false
+    }
+  }
+});
+
 /* Scatter 차트 */
 export const generateScatterChartOptions = ({ minX, maxX, minY, maxY }: ScatterChartOptionsType) => ({
   responsive: true,

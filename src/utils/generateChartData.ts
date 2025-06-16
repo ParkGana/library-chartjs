@@ -7,6 +7,7 @@ import type {
   DoughnutChartDataType,
   LineChartDataType,
   PieChartDataType,
+  RadarChartDataType,
   ScatterChartDataType
 } from '../types/chartType';
 
@@ -82,6 +83,22 @@ export const generatePieChartData = (data: PieChartDataType[]) => ({
       borderWidth: 0
     }
   ]
+});
+
+/* Radar 차트 */
+export const generateRadarChartData = (data: RadarChartDataType[]) => ({
+  labels: data[0].data.map(({ category }) => category),
+  datasets: data.map(({ name, data }, index) => ({
+    label: name,
+    data: data.map(({ value }) => value),
+    backgroundColor: PaleColor[index],
+    borderColor: Color[index],
+    borderWidth: 2,
+    pointBackgroundColor: Color[index],
+    pointRadius: 2,
+    pointHoverRadius: 3,
+    tension: 0
+  }))
 });
 
 /* Scatter 차트 */

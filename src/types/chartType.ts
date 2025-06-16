@@ -53,15 +53,14 @@ export type PieChartDataType = {
   value: number;
 };
 
-/* Bar + Line 차트 */
-export type BarLineChartDataType = {
+/* Radar 차트 */
+export type RadarChartDataType = {
   name: string;
   data: {
     id: string;
-    xlabel: string;
+    category: string;
     value: number;
   }[];
-  type: 'bar' | 'line';
 };
 
 /* Scatter 차트 */
@@ -72,4 +71,15 @@ export type ScatterChartDataType = {
     xvalue: number;
     yvalue: number;
   }[];
+};
+
+/* Bar + Line 차트 */
+export type BarLineChartDataType = {
+  name: string;
+  data: {
+    id: string;
+    xlabel: string;
+    value: number;
+  }[];
+  type: 'bar' | 'line';
 };

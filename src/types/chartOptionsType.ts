@@ -36,6 +36,9 @@ export type LineChartOptionsType = {
 /* Pie 차트 */
 export type PieChartOptionsType = {};
 
+/* Radar 차트 */
+export type RadarChartOptionsType = {};
+
 /* Scatter 차트 */
 export type ScatterChartOptionsType = {
   minX?: number;

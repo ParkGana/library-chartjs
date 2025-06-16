@@ -8,6 +8,7 @@ import PieChartPage from './pages/Pie';
 import DoughnutChartPage from './pages/Doughnut';
 import ScatterChartPage from './pages/Scatter';
 import BubbleChartPage from './pages/Bubble';
+import RadarChartPage from './pages/Radar';
 
 const Router = () => {
   return (
@@ -19,6 +20,7 @@ const Router = () => {
       <Route path="/doughnut" element={<DoughnutChartPage />} />
       <Route path="/line" element={<LineChartPage />} />
       <Route path="/pie" element={<PieChartPage />} />
+      <Route path="/radar" element={<RadarChartPage />} />
       <Route path="/scatter" element={<ScatterChartPage />} />
       <Route path="/barline" element={<BarLineChartPage />} />
 

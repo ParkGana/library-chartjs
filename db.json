@@ -841,6 +841,60 @@
       "value": 35
     }
   ],
+  "radar_A": [
+    {
+      "id": "e613",
+      "category": "주의력",
+      "value": 65
+    },
+    {
+      "id": "2bbd",
+      "category": "사고력",
+      "value": 91
+    },
+    {
+      "id": "51c9",
+      "category": "창의력",
+      "value": 25
+    },
+    {
+      "id": "3858",
+      "category": "기억력",
+      "value": 2
+    },
+    {
+      "id": "572d",
+      "category": "판단력",
+      "value": 48
+    }
+  ],
+  "radar_B": [
+    {
+      "id": "89a8",
+      "category": "주의력",
+      "value": 93
+    },
+    {
+      "id": "bd9a",
+      "category": "사고력",
+      "value": 53
+    },
+    {
+      "id": "143e",
+      "category": "창의력",
+      "value": 52
+    },
+    {
+      "id": "2882",
+      "category": "기억력",
+      "value": 65
+    },
+    {
+      "id": "4fbb",
+      "category": "판단력",
+      "value": 78
+    }
+  ],
   "scatter_A": [
     {
       "id": "a966",

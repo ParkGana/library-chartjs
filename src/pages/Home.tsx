@@ -9,6 +9,7 @@ const HomePage = () => {
       <Thumbnail type="doughnut" />
       <Thumbnail type="line" />
       <Thumbnail type="pie" />
+      <Thumbnail type="radar" />
       <Thumbnail type="scatter" />
       <Thumbnail type="bar + line" />
     </>
