@@ -140,6 +140,26 @@ export const generatePieChartOptions = () => ({
   }
 });
 
+/* Polar 차트 */
+export const generatePolarChartOptions = () => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    r: {
+      min: 0,
+      max: 100,
+      ticks: {
+        stepSize: 20
+      }
+    }
+  },
+  plugins: {
+    legend: {
+      display: false
+    }
+  }
+});
+
 /* Radar 차트 */
 export const generateRadarChartOptions = () => ({
   responsive: true,

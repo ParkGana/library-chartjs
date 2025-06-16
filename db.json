@@ -841,6 +841,33 @@
       "value": 35
     }
   ],
+  "polar": [
+    {
+      "id": "5cec",
+      "name": "A",
+      "value": 79
+    },
+    {
+      "id": "76ab",
+      "name": "B",
+      "value": 32
+    },
+    {
+      "id": "b67c",
+      "name": "C",
+      "value": 70
+    },
+    {
+      "id": "f1d6",
+      "name": "D",
+      "value": 58
+    },
+    {
+      "id": "517a",
+      "name": "E",
+      "value": 49
+    }
+  ],
   "radar_A": [
     {
       "id": "e613",

@@ -53,6 +53,13 @@ export type PieChartDataType = {
   value: number;
 };
 
+/* Polar 차트 */
+export type PolarChartDataType = {
+  id: string;
+  name: string;
+  value: number;
+};
+
 /* Radar 차트 */
 export type RadarChartDataType = {
   name: string;

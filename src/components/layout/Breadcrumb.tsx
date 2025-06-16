@@ -13,7 +13,7 @@ const Breadcrumb = () => {
         <>
           <FaAngleRight />
           <BreadcrumbSelectbox
-            options={['area', 'bar', 'bubble', 'doughnut', 'line', 'pie', 'radar', 'scatter', 'bar + line']}
+            options={['area', 'bar', 'bubble', 'doughnut', 'line', 'pie', 'polar', 'radar', 'scatter', 'bar + line']}
           />
         </>
       )}

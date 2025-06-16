@@ -36,6 +36,9 @@ export type LineChartOptionsType = {
 /* Pie 차트 */
 export type PieChartOptionsType = {};
 
+/* Polar 차트 */
+export type PolarChartOptionsType = {};
+
 /* Radar 차트 */
 export type RadarChartOptionsType = {};
 

@@ -7,6 +7,7 @@ import type {
   DoughnutChartDataType,
   LineChartDataType,
   PieChartDataType,
+  PolarChartDataType,
   RadarChartDataType,
   ScatterChartDataType
 } from '../types/chartType';
@@ -75,6 +76,18 @@ export const generateLineChartData = (data: LineChartDataType[]) => ({
 
 /* Pie 차트 */
 export const generatePieChartData = (data: PieChartDataType[]) => ({
+  labels: data.map(({ name }) => name),
+  datasets: [
+    {
+      data: data.map(({ value }) => value),
+      backgroundColor: Color.slice(0, data.length),
+      borderWidth: 0
+    }
+  ]
+});
+
+/* Polar 차트 */
+export const generatePolarChartData = (data: PolarChartDataType[]) => ({
   labels: data.map(({ name }) => name),
   datasets: [
     {
