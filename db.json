@@ -242,6 +242,33 @@
       "value": 72
     }
   ],
+  "bar_realtime": [
+    {
+      "id": "309c",
+      "name": "A",
+      "value": 32
+    },
+    {
+      "id": "abb5",
+      "name": "B",
+      "value": 47
+    },
+    {
+      "id": "cd34",
+      "name": "C",
+      "value": 4
+    },
+    {
+      "id": "0ffb",
+      "name": "D",
+      "value": 96
+    },
+    {
+      "id": "7836",
+      "name": "E",
+      "value": 22
+    }
+  ],
   "bar_realtime_stack_A": [
     {
       "id": "1a37",
