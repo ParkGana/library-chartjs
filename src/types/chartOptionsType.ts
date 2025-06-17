@@ -8,6 +8,7 @@ export type AreaChartOptionsType = {
 
 /* Bar 차트 */
 export type BarChartOptionsType = {
+  stacked?: boolean;
   minX?: string;
   maxX?: string;
   minY?: number;

@@ -36,23 +36,25 @@ export const generateAreaChartOptions = ({ minX, maxX, minY, maxY }: AreaChartOp
 });
 
 /* Bar 차트 */
-export const generateBarChartOptions = ({ minX, maxX, minY, maxY }: BarChartOptionsType) => ({
+export const generateBarChartOptions = ({ stacked = false, minX, maxX, minY, maxY }: BarChartOptionsType) => ({
   responsive: true,
   maintainAspectRatio: false,
   scales: {
-    ...(minX &&
-      maxX && {
-        x: {
+    x: {
+      stacked,
+      ...(minX &&
+        maxX && {
           type: 'category' as const,
           min: minX,
           max: maxX
-        }
-      }),
+        })
+    },
     y: {
+      stacked,
       min: minY ?? 0,
       max: maxY ?? 100,
       ticks: {
-        stepSize: 20
+        stepSize: (maxY ?? 100) / 5
       }
     }
   },
