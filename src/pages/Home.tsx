@@ -13,6 +13,7 @@ const HomePage = () => {
       <Thumbnail type="radar" />
       <Thumbnail type="scatter" />
       <Thumbnail type="bar + line" />
+      <Thumbnail type="bar + list" />
     </>
   );
 };

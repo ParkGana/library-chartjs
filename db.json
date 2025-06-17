@@ -161,6 +161,33 @@
       "value": 65
     }
   ],
+  "bar": [
+    {
+      "id": "309c",
+      "name": "A",
+      "value": 38
+    },
+    {
+      "id": "abb5",
+      "name": "B",
+      "value": 67
+    },
+    {
+      "id": "cd34",
+      "name": "C",
+      "value": 35
+    },
+    {
+      "id": "0ffb",
+      "name": "D",
+      "value": 74
+    },
+    {
+      "id": "7836",
+      "name": "E",
+      "value": 73
+    }
+  ],
   "bar_A": [
     {
       "id": "80ff",

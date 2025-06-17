@@ -90,3 +90,10 @@ export type BarLineChartDataType = {
   }[];
   type: 'bar' | 'line';
 };
+
+/* Bar + List 차트 */
+export type BarListChartDataType = {
+  id: string;
+  name: string;
+  value: number;
+};

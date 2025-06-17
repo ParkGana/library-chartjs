@@ -58,3 +58,6 @@ export type BarLineChartOptionsType = {
   minY?: number;
   maxY?: number;
 };
+
+/* Bar + List 차트 */
+export type BarListChartOptionsType = {};

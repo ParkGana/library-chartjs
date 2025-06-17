@@ -3,6 +3,7 @@ import type {
   AreaChartDataType,
   BarChartDataType,
   BarLineChartDataType,
+  BarListChartDataType,
   BubbleChartDataType,
   DoughnutChartDataType,
   LineChartDataType,
@@ -142,4 +143,15 @@ export const generateBarLineChartData = (data: BarLineChartDataType[]) => ({
       tension: 0
     })
   }))
+});
+
+/* Bar + List 차트 */
+export const generateBarListChartData = (data: BarListChartDataType[]) => ({
+  labels: data.map(({ name }) => name),
+  datasets: [
+    {
+      data: data.map(({ value }) => value),
+      backgroundColor: Color[0]
+    }
+  ]
 });

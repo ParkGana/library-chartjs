@@ -10,6 +10,7 @@ import ScatterChartPage from './pages/Scatter';
 import BubbleChartPage from './pages/Bubble';
 import RadarChartPage from './pages/Radar';
 import PolarChartPage from './pages/Polar';
+import BarListChartPage from './pages/BarList';
 
 const Router = () => {
   return (
@@ -25,6 +26,7 @@ const Router = () => {
       <Route path="/radar" element={<RadarChartPage />} />
       <Route path="/scatter" element={<ScatterChartPage />} />
       <Route path="/barline" element={<BarLineChartPage />} />
+      <Route path="/barlist" element={<BarListChartPage />} />
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

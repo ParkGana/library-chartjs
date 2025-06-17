@@ -13,7 +13,9 @@ const BreadcrumbSelectbox = ({ options }: BreadcrumbSelectboxProps) => {
 
   const selectboxRef = useRef<HTMLDivElement>(null);
 
-  const [selected, setSelected] = useState<string>(pathname.replace('/', '').replace('barline', 'bar + line'));
+  const [selected, setSelected] = useState<string>(
+    pathname.replace('/', '').replace('barline', 'bar + line').replace('barlist', 'bar + list')
+  );
   const [isOpenOptions, setIsOpenOptions] = useState<boolean>(false);
 
   /* 바깥 영역 클릭 시 option 창 닫기 */

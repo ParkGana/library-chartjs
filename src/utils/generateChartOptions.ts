@@ -236,3 +236,35 @@ export const generateBarLineChartOptions = ({ minX, maxX, minY, maxY }: BarLineC
     }
   }
 });
+
+/* Bar + List 차트 */
+export const generateBarListChartOptions = () => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  indexAxis: 'y' as const,
+  scales: {
+    x: {
+      display: false
+    },
+    y: {
+      ticks: {
+        display: false
+      },
+      grid: {
+        color: ({ index }: any) => (index === 0 ? 'transparent' : 'lightgray'),
+        drawBorder: true,
+        drawTicks: false
+      }
+    }
+  },
+  plugins: {
+    legend: {
+      display: false
+    },
+    tooltip: {
+      callbacks: {
+        title: () => ''
+      }
+    }
+  }
+});
