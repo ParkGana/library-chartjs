@@ -5,7 +5,7 @@ import {
   fetchBarLineChartDataAPI,
   fetchBarLineChartRealtimeSlideDataAPI,
   fetchBarLineChartRealtimeStackDataAPI
-} from '../../api/BarLine';
+} from '../api/BarLine';
 
 export const useBarLine = () => {
   const queryClient = useQueryClient();

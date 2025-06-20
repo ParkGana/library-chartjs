@@ -1,7 +1,7 @@
 import { BarElement, CategoryScale, Chart, Legend, LinearScale, Tooltip } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import ChartContainer from '../../layout/ChartContainer';
-import { useBar } from '../../../hooks/query/useBar';
+import { useBar } from '../../../hooks/useBar';
 import { generateBarChartData } from '../../../utils/generateChartData';
 import { generateBarChartOptions } from '../../../utils/generateChartOptions';
 

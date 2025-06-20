@@ -5,7 +5,7 @@ import {
   fetchAreaChartDataAPI,
   fetchAreaChartRealtimeSlideDataAPI,
   fetchAreaChartRealtimeStackDataAPI
-} from '../../api/Area';
+} from '../api/Area';
 
 export const useArea = () => {
   const queryClient = useQueryClient();

@@ -3,7 +3,7 @@ import {
   fetchRadarChartDataAPI,
   fetchRadarChartRealtimeDataAPI,
   updateRadarChartRealtimeDataAPI
-} from '../../api/Radar';
+} from '../api/Radar';
 
 export const useRadar = () => {
   const queryClient = useQueryClient();

@@ -5,7 +5,7 @@ import {
   fetchLineChartDataAPI,
   fetchLineChartRealtimeSlideDataAPI,
   fetchLineChartRealtimeStackDataAPI
-} from '../../api/Line';
+} from '../api/Line';
 
 export const useLine = () => {
   const queryClient = useQueryClient();

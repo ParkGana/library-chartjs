@@ -1,7 +1,7 @@
 import { BarElement, Chart, Legend, Tooltip } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import ChartContainer from '../../layout/ChartContainer';
-import { useBarList } from '../../../hooks/query/useBarList';
+import { useBarList } from '../../../hooks/useBarList';
 import { generateBarListChartData } from '../../../utils/generateChartData';
 import { generateBarListChartOptions } from '../../../utils/generateChartOptions';
 import clsx from 'clsx';

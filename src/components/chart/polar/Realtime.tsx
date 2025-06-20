@@ -2,7 +2,7 @@ import { Chart, RadialLinearScale, ArcElement, Tooltip, Legend } from 'chart.js'
 import { PolarArea } from 'react-chartjs-2';
 import { useEffect } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { usePolar } from '../../../hooks/query/usePolar';
+import { usePolar } from '../../../hooks/usePolar';
 import { generatePolarChartData } from '../../../utils/generateChartData';
 import { generatePolarChartOptions } from '../../../utils/generateChartOptions';
 

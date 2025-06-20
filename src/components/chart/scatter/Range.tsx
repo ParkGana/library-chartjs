@@ -2,7 +2,7 @@ import { PointElement, Chart, Legend, LinearScale, Tooltip } from 'chart.js';
 import { Scatter } from 'react-chartjs-2';
 import { useState } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useScatter } from '../../../hooks/query/useScatter';
+import { useScatter } from '../../../hooks/useScatter';
 import { generateScatterChartData } from '../../../utils/generateChartData';
 import { generateScatterChartOptions } from '../../../utils/generateChartOptions';
 import VerticalRangebar from '../../rangebar/VerticalRangebar';

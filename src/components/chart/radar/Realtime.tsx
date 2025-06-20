@@ -2,7 +2,7 @@ import { Chart, RadialLinearScale, PointElement, LineElement, Filler, Tooltip, L
 import { Radar } from 'react-chartjs-2';
 import { useEffect } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useRadar } from '../../../hooks/query/useRadar';
+import { useRadar } from '../../../hooks/useRadar';
 import { generateRadarChartData } from '../../../utils/generateChartData';
 import { generateRadarChartOptions } from '../../../utils/generateChartOptions';
 

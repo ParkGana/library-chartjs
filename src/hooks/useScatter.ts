@@ -3,7 +3,7 @@ import {
   createScatterChartRealtimeDataAPI,
   fetchScatterChartDataAPI,
   fetchScatterChartRealtimeDataAPI
-} from '../../api/Scatter';
+} from '../api/Scatter';
 
 export const useScatter = () => {
   const queryClient = useQueryClient();

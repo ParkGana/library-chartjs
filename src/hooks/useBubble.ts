@@ -3,7 +3,7 @@ import {
   createBubbleChartRealtimeDataAPI,
   fetchBubbleChartDataAPI,
   fetchBubbleChartRealtimeDataAPI
-} from '../../api/Bubble';
+} from '../api/Bubble';
 
 export const useBubble = () => {
   const queryClient = useQueryClient();

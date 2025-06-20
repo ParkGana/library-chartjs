@@ -2,7 +2,7 @@ import { BarElement, CategoryScale, Chart, Legend, LinearScale, LineElement, Poi
 import { Chart as BarLine } from 'react-chartjs-2';
 import { useEffect, useState } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useBarLine } from '../../../hooks/query/useBarLine';
+import { useBarLine } from '../../../hooks/useBarLine';
 import { generateBarLineChartData } from '../../../utils/generateChartData';
 import { generateBarLineChartOptions } from '../../../utils/generateChartOptions';
 import VerticalRangebar from '../../rangebar/VerticalRangebar';

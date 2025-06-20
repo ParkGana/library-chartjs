@@ -3,7 +3,7 @@ import {
   fetchBarListChartDataAPI,
   fetchBarListChartRealtimeDataAPI,
   updateBarListChartRealtimeDataAPI
-} from '../../api/BarList';
+} from '../api/BarList';
 
 export const useBarList = () => {
   const queryClient = useQueryClient();

@@ -5,7 +5,7 @@ import {
   fetchBarChartDataAPI,
   fetchBarChartRealtimeSlideDataAPI,
   fetchBarChartRealtimeStackDataAPI
-} from '../../api/Bar';
+} from '../api/Bar';
 
 export const useBar = () => {
   const queryClient = useQueryClient();

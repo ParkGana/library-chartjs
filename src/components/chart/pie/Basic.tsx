@@ -1,7 +1,7 @@
 import { Chart, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import ChartContainer from '../../layout/ChartContainer';
-import { usePie } from '../../../hooks/query/usePie';
+import { usePie } from '../../../hooks/usePie';
 import { generatePieChartData } from '../../../utils/generateChartData';
 import { generatePieChartOptions } from '../../../utils/generateChartOptions';
 

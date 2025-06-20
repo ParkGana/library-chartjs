@@ -1,7 +1,7 @@
 import { CategoryScale, Chart, Legend, LinearScale, LineElement, PointElement, Tooltip } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import ChartContainer from '../../layout/ChartContainer';
-import { useLine } from '../../../hooks/query/useLine';
+import { useLine } from '../../../hooks/useLine';
 import { generateLineChartData } from '../../../utils/generateChartData';
 import { generateLineChartOptions } from '../../../utils/generateChartOptions';
 

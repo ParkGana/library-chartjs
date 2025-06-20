@@ -2,7 +2,7 @@ import { PointElement, Chart, Legend, LinearScale, Tooltip } from 'chart.js';
 import { Scatter } from 'react-chartjs-2';
 import { useEffect } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useScatter } from '../../../hooks/query/useScatter';
+import { useScatter } from '../../../hooks/useScatter';
 import { generateScatterChartData } from '../../../utils/generateChartData';
 import { generateScatterChartOptions } from '../../../utils/generateChartOptions';
 

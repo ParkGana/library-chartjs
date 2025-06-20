@@ -3,7 +3,7 @@ import {
   fetchPolarChartDataAPI,
   fetchPolarChartRealtimeDataAPI,
   updatePolarChartRealtimeDataAPI
-} from '../../api/Polar';
+} from '../api/Polar';
 
 export const usePolar = () => {
   const queryClient = useQueryClient();

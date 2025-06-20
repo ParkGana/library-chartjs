@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { fetchPieChartDataAPI, fetchPieChartRealtimeDataAPI, updatePieChartRealtimeDataAPI } from '../../api/Pie';
+import { fetchPieChartDataAPI, fetchPieChartRealtimeDataAPI, updatePieChartRealtimeDataAPI } from '../api/Pie';
 
 export const usePie = () => {
   const queryClient = useQueryClient();

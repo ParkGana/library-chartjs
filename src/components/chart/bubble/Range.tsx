@@ -2,7 +2,7 @@ import { PointElement, Chart, Legend, LinearScale, Tooltip } from 'chart.js';
 import { Bubble } from 'react-chartjs-2';
 import { useState } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useBubble } from '../../../hooks/query/useBubble';
+import { useBubble } from '../../../hooks/useBubble';
 import { generateBubbleChartData } from '../../../utils/generateChartData';
 import { generateBubbleChartOptions } from '../../../utils/generateChartOptions';
 import VerticalRangebar from '../../rangebar/VerticalRangebar';

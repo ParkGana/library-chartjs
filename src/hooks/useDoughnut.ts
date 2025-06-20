@@ -3,7 +3,7 @@ import {
   fetchDoughnutChartDataAPI,
   fetchDoughnutChartRealtimeDataAPI,
   updateDoughnutChartRealtimeDataAPI
-} from '../../api/Doughnut';
+} from '../api/Doughnut';
 
 export const useDoughnut = () => {
   const queryClient = useQueryClient();

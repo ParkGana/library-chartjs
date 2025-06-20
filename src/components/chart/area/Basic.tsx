@@ -1,7 +1,7 @@
 import { CategoryScale, Chart, Filler, Legend, LinearScale, LineElement, Tooltip } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import ChartContainer from '../../layout/ChartContainer';
-import { useArea } from '../../../hooks/query/useArea';
+import { useArea } from '../../../hooks/useArea';
 import { generateAreaChartData } from '../../../utils/generateChartData';
 import { generateAreaChartOptions } from '../../../utils/generateChartOptions';
 
