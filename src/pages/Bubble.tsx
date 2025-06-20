@@ -10,10 +10,9 @@ const BubbleChartPage = () => {
   useEffect(() => {
     const resetData = async () => {
       await Promise.all([resetBubbleChartRealtimeADataAPI(), resetBubbleChartRealtimeBDataAPI()]);
+      setIsReset(true);
     };
-
     resetData();
-    setIsReset(true);
   }, []);
 
   return (

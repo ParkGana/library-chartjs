@@ -21,10 +21,9 @@ const LineChartPage = () => {
         resetLineChartRealtimeSlideADataAPI(),
         resetLineChartRealtimeSlideBDataAPI()
       ]);
+      setIsReset(true);
     };
-
     resetData();
-    setIsReset(true);
   }, []);
 
   return (

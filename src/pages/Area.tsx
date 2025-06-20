@@ -21,10 +21,9 @@ const AreaChartPage = () => {
         resetAreaChartRealtimeSlideADataAPI(),
         resetAreaChartRealtimeSlideBDataAPI()
       ]);
+      setIsReset(true);
     };
-
     resetData();
-    setIsReset(true);
   }, []);
 
   return (

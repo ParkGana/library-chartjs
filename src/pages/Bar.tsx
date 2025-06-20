@@ -22,10 +22,9 @@ const BarChartPage = () => {
         resetBarChartRealtimeSlideADataAPI(),
         resetBarChartRealtimeSlideBDataAPI()
       ]);
+      setIsReset(true);
     };
-
     resetData();
-    setIsReset(true);
   }, []);
 
   return (

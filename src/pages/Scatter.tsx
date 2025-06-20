@@ -10,10 +10,9 @@ const ScatterChartPage = () => {
   useEffect(() => {
     const resetData = async () => {
       await Promise.all([resetScatterChartRealtimeADataAPI(), resetScatterChartRealtimeBDataAPI()]);
+      setIsReset(true);
     };
-
     resetData();
-    setIsReset(true);
   }, []);
 
   return (
