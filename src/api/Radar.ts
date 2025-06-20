@@ -2,11 +2,12 @@ import axios from 'axios';
 import { faker } from '@faker-js/faker';
 import type { RadarChartDataType } from '../types/chartType';
 
-const API_URL = 'http://localhost:4000';
-
 /* Radar 차트 데이터 가져오기 */
 export const fetchRadarChartDataAPI = async (): Promise<RadarChartDataType[]> => {
-  const [resA, resB] = await Promise.all([axios.get(`${API_URL}/radar_A`), axios.get(`${API_URL}/radar_B`)]);
+  const [resA, resB] = await Promise.all([
+    axios.get(`${import.meta.env.VITE_API_URL}/radar_A`),
+    axios.get(`${import.meta.env.VITE_API_URL}/radar_B`)
+  ]);
   return [
     { name: 'A', data: resA.data },
     { name: 'B', data: resB.data }
@@ -16,8 +17,8 @@ export const fetchRadarChartDataAPI = async (): Promise<RadarChartDataType[]> =>
 /* Radar 차트 데이터 가져오기 (Realtime) */
 export const fetchRadarChartRealtimeDataAPI = async (): Promise<RadarChartDataType[]> => {
   const [resA, resB] = await Promise.all([
-    axios.get(`${API_URL}/radar_realtime_A`),
-    axios.get(`${API_URL}/radar_realtime_B`)
+    axios.get(`${import.meta.env.VITE_API_URL}/radar_realtime_A`),
+    axios.get(`${import.meta.env.VITE_API_URL}/radar_realtime_B`)
   ]);
   return [
     { name: 'A', data: resA.data },
@@ -30,7 +31,9 @@ export const updateRadarChartRealtimeDataAPI = async (datas: RadarChartDataType[
   await Promise.all(
     datas.map(({ name, data }) =>
       data.map((item) =>
-        axios.patch(`${API_URL}/radar_realtime_${name}/${item.id}`, { value: faker.number.int({ min: 0, max: 100 }) })
+        axios.patch(`${import.meta.env.VITE_API_URL}/radar_realtime_${name}/${item.id}`, {
+          value: faker.number.int({ min: 0, max: 100 })
+        })
       )
     )
   );

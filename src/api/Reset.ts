@@ -21,115 +21,141 @@ const LINE_REALTIME_SLIDE_B_DATA = ['0988', '47b0', 'd927', '8ff4', '9924'];
 const SCATTER_REALTIME_A_DATA = ['8645', '98fe', 'b7d1', '8b41', '5f22', 'd516', '8bbe', '812b', '616e', 'b9be'];
 const SCATTER_REALTIME_B_DATA = ['38c1', '124a', '42f3', '2815', '6e00', '694b', 'f864', 'e257', '860e', '5953'];
 
-const API_URL = 'http://localhost:4000';
-
 /**********************************************************************
  * Area 차트
  **********************************************************************/
 export const resetAreaChartRealtimeStackADataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/area_realtime_stack_A`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/area_realtime_stack_A`);
   const data = res.data.filter((item: any) => !AREA_REALTIME_STACK_A_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/area_realtime_stack_A/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/area_realtime_stack_A/${id}`))
+  );
 };
 
 export const resetAreaChartRealtimeStackBDataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/area_realtime_stack_B`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/area_realtime_stack_B`);
   const data = res.data.filter((item: any) => !AREA_REALTIME_STACK_B_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/area_realtime_stack_B/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/area_realtime_stack_B/${id}`))
+  );
 };
 
 export const resetAreaChartRealtimeSlideADataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/area_realtime_slide_A`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/area_realtime_slide_A`);
   const data = res.data.filter((item: any) => !AREA_REALTIME_SLIDE_A_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/area_realtime_slide_A/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/area_realtime_slide_A/${id}`))
+  );
 };
 
 export const resetAreaChartRealtimeSlideBDataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/area_realtime_slide_B`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/area_realtime_slide_B`);
   const data = res.data.filter((item: any) => !AREA_REALTIME_SLIDE_B_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/area_realtime_slide_B/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/area_realtime_slide_B/${id}`))
+  );
 };
 
 /**********************************************************************
  * Bar 차트
  **********************************************************************/
 export const resetBarChartRealtimeStackADataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/bar_realtime_stack_A`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/bar_realtime_stack_A`);
   const data = res.data.filter((item: any) => !BAR_REALTIME_STACK_A_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/bar_realtime_stack_A/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/bar_realtime_stack_A/${id}`))
+  );
 };
 
 export const resetBarChartRealtimeStackBDataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/bar_realtime_stack_B`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/bar_realtime_stack_B`);
   const data = res.data.filter((item: any) => !BAR_REALTIME_STACK_B_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/bar_realtime_stack_B/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/bar_realtime_stack_B/${id}`))
+  );
 };
 
 export const resetBarChartRealtimeSlideADataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/bar_realtime_slide_A`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/bar_realtime_slide_A`);
   const data = res.data.filter((item: any) => !BAR_REALTIME_SLIDE_A_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/bar_realtime_slide_A/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/bar_realtime_slide_A/${id}`))
+  );
 };
 
 export const resetBarChartRealtimeSlideBDataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/bar_realtime_slide_B`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/bar_realtime_slide_B`);
   const data = res.data.filter((item: any) => !BAR_REALTIME_SLIDE_B_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/bar_realtime_slide_B/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/bar_realtime_slide_B/${id}`))
+  );
 };
 
 /**********************************************************************
  * Bubble 차트
  **********************************************************************/
 export const resetBubbleChartRealtimeADataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/bubble_realtime_A`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/bubble_realtime_A`);
   const data = res.data.filter((item: any) => !BUBBLE_REALTIME_A_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/bubble_realtime_A/${id}`)));
+  await Promise.all(data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/bubble_realtime_A/${id}`)));
 };
 
 export const resetBubbleChartRealtimeBDataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/bubble_realtime_B`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/bubble_realtime_B`);
   const data = res.data.filter((item: any) => !BUBBLE_REALTIME_B_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/bubble_realtime_B/${id}`)));
+  await Promise.all(data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/bubble_realtime_B/${id}`)));
 };
 
 /**********************************************************************
  * Line 차트
  **********************************************************************/
 export const resetLineChartRealtimeStackADataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/line_realtime_stack_A`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/line_realtime_stack_A`);
   const data = res.data.filter((item: any) => !LINE_REALTIME_STACK_A_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/line_realtime_stack_A/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/line_realtime_stack_A/${id}`))
+  );
 };
 
 export const resetLineChartRealtimeStackBDataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/line_realtime_stack_B`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/line_realtime_stack_B`);
   const data = res.data.filter((item: any) => !LINE_REALTIME_STACK_B_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/line_realtime_stack_B/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/line_realtime_stack_B/${id}`))
+  );
 };
 
 export const resetLineChartRealtimeSlideADataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/line_realtime_slide_A`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/line_realtime_slide_A`);
   const data = res.data.filter((item: any) => !LINE_REALTIME_SLIDE_A_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/line_realtime_slide_A/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/line_realtime_slide_A/${id}`))
+  );
 };
 
 export const resetLineChartRealtimeSlideBDataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/line_realtime_slide_B`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/line_realtime_slide_B`);
   const data = res.data.filter((item: any) => !LINE_REALTIME_SLIDE_B_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/line_realtime_slide_B/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/line_realtime_slide_B/${id}`))
+  );
 };
 
 /**********************************************************************
  * Scatter 차트
  **********************************************************************/
 export const resetScatterChartRealtimeADataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/scatter_realtime_A`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/scatter_realtime_A`);
   const data = res.data.filter((item: any) => !SCATTER_REALTIME_A_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/scatter_realtime_A/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/scatter_realtime_A/${id}`))
+  );
 };
 
 export const resetScatterChartRealtimeBDataAPI = async (): Promise<void> => {
-  const res = await axios.get(`${API_URL}/scatter_realtime_B`);
+  const res = await axios.get(`${import.meta.env.VITE_API_URL}/scatter_realtime_B`);
   const data = res.data.filter((item: any) => !SCATTER_REALTIME_B_DATA.includes(item.id));
-  await Promise.all(data.map(({ id }: any) => axios.delete(`${API_URL}/scatter_realtime_B/${id}`)));
+  await Promise.all(
+    data.map(({ id }: any) => axios.delete(`${import.meta.env.VITE_API_URL}/scatter_realtime_B/${id}`))
+  );
 };
