@@ -2,28 +2,28 @@ import { CategoryScale, Chart, Filler, Legend, LinearScale, LineElement, Tooltip
 import { Line } from 'react-chartjs-2';
 import { useEffect, useState } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useArea } from '../../../hooks/useArea';
 import { generateAreaChartData } from '../../../utils/generateChartData';
 import { generateAreaChartOptions } from '../../../utils/generateChartOptions';
 import VerticalRangebar from '../../rangebar/VerticalRangebar';
 import HorizontalRangebar from '../../rangebar/HorizontalRangebar';
+import { useAreaStore } from '../../../stores/areaStore';
 
 Chart.register(CategoryScale, LinearScale, LineElement, Tooltip, Legend, Filler);
 
 const RangeArea = () => {
-  const {
-    fetchAreaChartDataQuery: { data, isPending, isError }
-  } = useArea();
+  const { areaA, areaB } = useAreaStore();
+
+  const data = [
+    { name: 'A', data: areaA },
+    { name: 'B', data: areaB }
+  ];
 
   const [rangeX, setRangeX] = useState({ min: 0, max: 100 });
   const [rangeY, setRangeY] = useState({ min: 0, max: 100 });
 
   useEffect(() => {
-    if (data) setRangeX({ ...rangeX, max: data[0].data.length });
-  }, [data]);
-
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+    setRangeX({ ...rangeX, max: data[0].data.length });
+  }, []);
 
   const chartData = generateAreaChartData(data);
   const chartOptions = generateAreaChartOptions({

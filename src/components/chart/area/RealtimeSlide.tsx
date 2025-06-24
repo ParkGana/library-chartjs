@@ -2,29 +2,27 @@ import { CategoryScale, Chart, Filler, Legend, LinearScale, LineElement, Tooltip
 import { Line } from 'react-chartjs-2';
 import { useEffect } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useArea } from '../../../hooks/useArea';
 import { generateAreaChartData } from '../../../utils/generateChartData';
 import { generateAreaChartOptions } from '../../../utils/generateChartOptions';
+import { useAreaStore } from '../../../stores/areaStore';
 
 Chart.register(CategoryScale, LinearScale, LineElement, Tooltip, Legend, Filler);
 
 const RealtimeSlideArea = () => {
-  const {
-    fetchAreaChartRealtimeSlideDataQuery: { data, isPending, isError },
-    createAreaChartRealtimeSlideDataMutation
-  } = useArea();
+  const { areaRealtimeSlideA, createAreaRealtimeSlideA, areaRealtimeSlideB, createAreaRealtimeSlideB } = useAreaStore();
+
+  const data = [
+    { name: 'A', data: areaRealtimeSlideA },
+    { name: 'B', data: areaRealtimeSlideB }
+  ];
 
   useEffect(() => {
-    if (data) {
-      const interval = setInterval(() => {
-        createAreaChartRealtimeSlideDataMutation.mutate(String(Number(data[0].data.slice(-1)[0].xlabel) + 1));
-      }, 3000);
-      return () => clearInterval(interval);
-    }
-  }, [data]);
-
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+    const interval = setInterval(() => {
+      createAreaRealtimeSlideA();
+      createAreaRealtimeSlideB();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const chartData = generateAreaChartData(data);
   const chartOptions = generateAreaChartOptions({
