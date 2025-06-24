@@ -2,28 +2,28 @@ import { CategoryScale, Chart, Legend, LinearScale, LineElement, PointElement, T
 import { Line } from 'react-chartjs-2';
 import { useEffect, useState } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useLine } from '../../../hooks/useLine';
 import { generateLineChartData } from '../../../utils/generateChartData';
 import { generateLineChartOptions } from '../../../utils/generateChartOptions';
 import VerticalRangebar from '../../rangebar/VerticalRangebar';
 import HorizontalRangebar from '../../rangebar/HorizontalRangebar';
+import { useLineStore } from '../../../stores/lineStore';
 
 Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 const RangeLine = () => {
-  const {
-    fetchLineChartDataQuery: { data, isPending, isError }
-  } = useLine();
+  const { lineA, lineB } = useLineStore();
+
+  const data = [
+    { name: 'A', data: lineA },
+    { name: 'B', data: lineB }
+  ];
 
   const [rangeX, setRangeX] = useState({ min: 0, max: 100 });
   const [rangeY, setRangeY] = useState({ min: 0, max: 100 });
 
   useEffect(() => {
-    if (data) setRangeX({ ...rangeX, max: data[0].data.length });
-  }, [data]);
-
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+    setRangeX({ ...rangeX, max: data[0].data.length });
+  }, []);
 
   const chartData = generateLineChartData(data);
   const chartOptions = generateLineChartOptions({

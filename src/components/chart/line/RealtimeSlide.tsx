@@ -2,29 +2,27 @@ import { CategoryScale, Chart, Legend, LinearScale, LineElement, PointElement, T
 import { Line } from 'react-chartjs-2';
 import { useEffect } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useLine } from '../../../hooks/useLine';
 import { generateLineChartData } from '../../../utils/generateChartData';
 import { generateLineChartOptions } from '../../../utils/generateChartOptions';
+import { useLineStore } from '../../../stores/lineStore';
 
 Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 const RealtimeSlideLine = () => {
-  const {
-    fetchLineChartRealtimeSlideDataQuery: { data, isPending, isError },
-    createLineChartRealtimeSlideDataMutation
-  } = useLine();
+  const { lineRealtimeSlideA, createLineRealtimeSlideA, lineRealtimeSlideB, createLineRealtimeSlideB } = useLineStore();
+
+  const data = [
+    { name: 'A', data: lineRealtimeSlideA },
+    { name: 'B', data: lineRealtimeSlideB }
+  ];
 
   useEffect(() => {
-    if (data) {
-      const interval = setInterval(() => {
-        createLineChartRealtimeSlideDataMutation.mutate(String(Number(data[0].data.slice(-1)[0].xlabel) + 1));
-      }, 3000);
-      return () => clearInterval(interval);
-    }
-  }, [data]);
-
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+    const interval = setInterval(() => {
+      createLineRealtimeSlideA();
+      createLineRealtimeSlideB();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const chartData = generateLineChartData(data);
   const chartOptions = generateLineChartOptions({

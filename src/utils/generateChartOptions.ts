@@ -120,7 +120,7 @@ export const generateLineChartOptions = ({ minX, maxX, minY, maxY }: LineChartOp
       min: minY ?? 0,
       max: maxY ?? 100,
       ticks: {
-        stepSize: 20
+        stepSize: (maxY ?? 100) / 5
       }
     }
   },
