@@ -2,29 +2,36 @@ import { BarElement, CategoryScale, Chart, Legend, LinearScale, LineElement, Poi
 import { Chart as BarLine } from 'react-chartjs-2';
 import { useEffect } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useBarLine } from '../../../hooks/useBarLine';
 import { generateBarLineChartData } from '../../../utils/generateChartData';
 import { generateBarLineChartOptions } from '../../../utils/generateChartOptions';
+import { useBarLineStore } from '../../../stores/barlineStore';
 
 Chart.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Legend);
 
 const RealtimeStackBarLine = () => {
   const {
-    fetchBarLineChartRealtimeStackDataQuery: { data, isPending, isError },
-    createBarLineChartRealtimeStackDataMutation
-  } = useBarLine();
+    lineRealtimeStackA,
+    createLineRealtimeStackA,
+    barRealtimeStackA,
+    createBarRealtimeStackA,
+    barRealtimeStackB,
+    createBarRealtimeStackB
+  } = useBarLineStore();
+
+  const data = [
+    { name: 'A', data: lineRealtimeStackA, type: 'line' as const },
+    { name: 'B', data: barRealtimeStackA, type: 'bar' as const },
+    { name: 'C', data: barRealtimeStackB, type: 'bar' as const }
+  ];
 
   useEffect(() => {
-    if (data) {
-      const interval = setInterval(() => {
-        createBarLineChartRealtimeStackDataMutation.mutate(String(Number(data[0].data.slice(-1)[0].xlabel) + 1));
-      }, 3000);
-      return () => clearInterval(interval);
-    }
-  }, [data]);
-
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+    const interval = setInterval(() => {
+      createLineRealtimeStackA();
+      createBarRealtimeStackA();
+      createBarRealtimeStackB();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const chartData = generateBarLineChartData(data);
   const chartOptions = generateBarLineChartOptions({});

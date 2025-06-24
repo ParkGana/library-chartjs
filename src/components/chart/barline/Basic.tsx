@@ -1,19 +1,20 @@
 import { BarElement, CategoryScale, Chart, Legend, LinearScale, LineElement, PointElement, Tooltip } from 'chart.js';
 import { Chart as BarLine } from 'react-chartjs-2';
 import ChartContainer from '../../layout/ChartContainer';
-import { useBarLine } from '../../../hooks/useBarLine';
 import { generateBarLineChartData } from '../../../utils/generateChartData';
 import { generateBarLineChartOptions } from '../../../utils/generateChartOptions';
+import { useBarLineStore } from '../../../stores/barlineStore';
 
 Chart.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Legend);
 
 const BasicBarLine = () => {
-  const {
-    fetchBarLineChartDataQuery: { data, isPending, isError }
-  } = useBarLine();
+  const { lineA, barA, barB } = useBarLineStore();
 
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+  const data = [
+    { name: 'A', data: lineA, type: 'line' as const },
+    { name: 'B', data: barA, type: 'bar' as const },
+    { name: 'C', data: barB, type: 'bar' as const }
+  ];
 
   const chartData = generateBarLineChartData(data);
   const chartOptions = generateBarLineChartOptions({});

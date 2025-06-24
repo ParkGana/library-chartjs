@@ -2,29 +2,36 @@ import { BarElement, CategoryScale, Chart, Legend, LinearScale, LineElement, Poi
 import { Chart as BarLine } from 'react-chartjs-2';
 import { useEffect } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useBarLine } from '../../../hooks/useBarLine';
 import { generateBarLineChartData } from '../../../utils/generateChartData';
 import { generateBarLineChartOptions } from '../../../utils/generateChartOptions';
+import { useBarLineStore } from '../../../stores/barlineStore';
 
 Chart.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Legend);
 
 const RealtimeSlideBarLine = () => {
   const {
-    fetchBarLineChartRealtimeSlideDataQuery: { data, isPending, isError },
-    createBarLineChartRealtimeSlideDataMutation
-  } = useBarLine();
+    lineRealtimeSlideA,
+    createLineRealtimeSlideA,
+    barRealtimeSlideA,
+    createBarRealtimeSlideA,
+    barRealtimeSlideB,
+    createBarRealtimeSlideB
+  } = useBarLineStore();
+
+  const data = [
+    { name: 'A', data: lineRealtimeSlideA, type: 'line' as const },
+    { name: 'B', data: barRealtimeSlideA, type: 'bar' as const },
+    { name: 'C', data: barRealtimeSlideB, type: 'bar' as const }
+  ];
 
   useEffect(() => {
-    if (data) {
-      const interval = setInterval(() => {
-        createBarLineChartRealtimeSlideDataMutation.mutate(String(Number(data[0].data.slice(-1)[0].xlabel) + 1));
-      }, 3000);
-      return () => clearInterval(interval);
-    }
-  }, [data]);
-
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+    const interval = setInterval(() => {
+      createLineRealtimeSlideA();
+      createBarRealtimeSlideA();
+      createBarRealtimeSlideB();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const chartData = generateBarLineChartData(data);
   const chartOptions = generateBarLineChartOptions({

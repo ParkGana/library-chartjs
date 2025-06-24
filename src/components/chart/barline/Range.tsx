@@ -2,28 +2,29 @@ import { BarElement, CategoryScale, Chart, Legend, LinearScale, LineElement, Poi
 import { Chart as BarLine } from 'react-chartjs-2';
 import { useEffect, useState } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useBarLine } from '../../../hooks/useBarLine';
 import { generateBarLineChartData } from '../../../utils/generateChartData';
 import { generateBarLineChartOptions } from '../../../utils/generateChartOptions';
 import VerticalRangebar from '../../rangebar/VerticalRangebar';
 import HorizontalRangebar from '../../rangebar/HorizontalRangebar';
+import { useBarLineStore } from '../../../stores/barlineStore';
 
 Chart.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Tooltip, Legend);
 
 const RangeBarLine = () => {
-  const {
-    fetchBarLineChartDataQuery: { data, isPending, isError }
-  } = useBarLine();
+  const { lineA, barA, barB } = useBarLineStore();
+
+  const data = [
+    { name: 'A', data: lineA, type: 'line' as const },
+    { name: 'B', data: barA, type: 'bar' as const },
+    { name: 'C', data: barB, type: 'bar' as const }
+  ];
 
   const [rangeX, setRangeX] = useState({ min: 0, max: 100 });
   const [rangeY, setRangeY] = useState({ min: 0, max: 100 });
 
   useEffect(() => {
-    if (data) setRangeX({ ...rangeX, max: data[0].data.length });
-  }, [data]);
-
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+    setRangeX({ ...rangeX, max: data[0].data.length });
+  }, []);
 
   const chartData = generateBarLineChartData(data);
   const chartOptions = generateBarLineChartOptions({
