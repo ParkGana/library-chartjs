@@ -2,29 +2,27 @@ import { BarElement, CategoryScale, Chart, Legend, LinearScale, Tooltip } from '
 import { Bar } from 'react-chartjs-2';
 import { useEffect } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useBar } from '../../../hooks/useBar';
 import { generateBarChartData } from '../../../utils/generateChartData';
 import { generateBarChartOptions } from '../../../utils/generateChartOptions';
+import { useBarStore } from '../../../stores/barStore';
 
 Chart.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 const RealtimeSlideBar = () => {
-  const {
-    fetchBarChartRealtimeSlideDataQuery: { data, isPending, isError },
-    createBarChartRealtimeSlideDataMutation
-  } = useBar();
+  const { barRealtimeSlideA, createBarRealtimeSlideA, barRealtimeSlideB, createBarRealtimeSlideB } = useBarStore();
+
+  const data = [
+    { name: 'A', data: barRealtimeSlideA },
+    { name: 'B', data: barRealtimeSlideB }
+  ];
 
   useEffect(() => {
-    if (data) {
-      const interval = setInterval(() => {
-        createBarChartRealtimeSlideDataMutation.mutate(String(Number(data[0].data.slice(-1)[0].xlabel) + 1));
-      }, 3000);
-      return () => clearInterval(interval);
-    }
-  }, [data]);
-
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+    const interval = setInterval(() => {
+      createBarRealtimeSlideA();
+      createBarRealtimeSlideB();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const chartData = generateBarChartData(data);
   const chartOptions = generateBarChartOptions({
