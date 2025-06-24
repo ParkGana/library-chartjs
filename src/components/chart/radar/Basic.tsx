@@ -1,19 +1,19 @@
 import { Chart, RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
 import ChartContainer from '../../layout/ChartContainer';
-import { useRadar } from '../../../hooks/useRadar';
 import { generateRadarChartData } from '../../../utils/generateChartData';
 import { generateRadarChartOptions } from '../../../utils/generateChartOptions';
+import { useRadarStore } from '../../../stores/radarStore';
 
 Chart.register(RadialLinearScale, PointElement, LineElement, Tooltip, Legend, Filler);
 
 const BasicRadar = () => {
-  const {
-    fetchRadarChartDataQuery: { data, isPending, isError }
-  } = useRadar();
+  const { radarA, radarB } = useRadarStore();
 
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+  const data = [
+    { name: 'A', data: radarA },
+    { name: 'B', data: radarB }
+  ];
 
   const chartData = generateRadarChartData(data);
   const chartOptions = generateRadarChartOptions();

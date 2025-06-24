@@ -2,29 +2,27 @@ import { Chart, RadialLinearScale, PointElement, LineElement, Filler, Tooltip, L
 import { Radar } from 'react-chartjs-2';
 import { useEffect } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useRadar } from '../../../hooks/useRadar';
 import { generateRadarChartData } from '../../../utils/generateChartData';
 import { generateRadarChartOptions } from '../../../utils/generateChartOptions';
+import { useRadarStore } from '../../../stores/radarStore';
 
 Chart.register(RadialLinearScale, PointElement, LineElement, Tooltip, Legend, Filler);
 
 const RealtimeRadar = () => {
-  const {
-    fetchRadarChartRealtimeDataQuery: { data, isPending, isError },
-    updateRadarChartRealtimeDataMutation
-  } = useRadar();
+  const { radarRealtimeA, updateRadarRealtimeA, radarRealtimeB, updateRadarRealtimeB } = useRadarStore();
+
+  const data = [
+    { name: 'A', data: radarRealtimeA },
+    { name: 'B', data: radarRealtimeB }
+  ];
 
   useEffect(() => {
-    if (data) {
-      const interval = setInterval(() => {
-        updateRadarChartRealtimeDataMutation.mutate(data);
-      }, 3000);
-      return () => clearInterval(interval);
-    }
-  }, [data]);
-
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+    const interval = setInterval(() => {
+      updateRadarRealtimeA();
+      updateRadarRealtimeB();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const chartData = generateRadarChartData(data);
   const chartOptions = generateRadarChartOptions();
