@@ -1,19 +1,16 @@
 import { Chart, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import ChartContainer from '../../layout/ChartContainer';
-import { usePie } from '../../../hooks/usePie';
 import { generatePieChartData } from '../../../utils/generateChartData';
 import { generatePieChartOptions } from '../../../utils/generateChartOptions';
+import { usePieStore } from '../../../stores/pieStore';
 
 Chart.register(ArcElement, Tooltip, Legend);
 
 const BasicPie = () => {
-  const {
-    fetchPieChartDataQuery: { data, isPending, isError }
-  } = usePie();
+  const { pie } = usePieStore();
 
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+  const data = pie;
 
   const chartData = generatePieChartData(data);
   const chartOptions = generatePieChartOptions();
