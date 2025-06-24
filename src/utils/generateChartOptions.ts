@@ -74,14 +74,14 @@ export const generateBubbleChartOptions = ({ minX, maxX, minY, maxY }: BubbleCha
       min: minX ?? 0,
       max: maxX ?? 100,
       ticks: {
-        stepSize: 20
+        stepSize: (maxX ?? 100) / 5
       }
     },
     y: {
       min: minY ?? 0,
       max: maxY ?? 100,
       ticks: {
-        stepSize: 20
+        stepSize: (maxY ?? 100) / 5
       }
     }
   },
