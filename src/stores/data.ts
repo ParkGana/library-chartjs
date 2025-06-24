@@ -1,0 +1,354 @@
+/**********************************************************************
+ * Area 차트
+ **********************************************************************/
+export const AREA_A_DATA = [
+  { id: '0c53', xlabel: '2021', value: 54 },
+  { id: 'cb3b', xlabel: '2022', value: 32 },
+  { id: 'deea', xlabel: '2023', value: 10 },
+  { id: '464c', xlabel: '2024', value: 95 },
+  { id: 'ba47', xlabel: '2025', value: 8 }
+];
+
+export const AREA_B_DATA = [
+  { id: 'fb33', xlabel: '2021', value: 100 },
+  { id: 'a6fc', xlabel: '2022', value: 72 },
+  { id: 'c5b2', xlabel: '2023', value: 73 },
+  { id: '28ec', xlabel: '2024', value: 25 },
+  { id: 'd0c4', xlabel: '2025', value: 10 }
+];
+
+export const AREA_REALTIME_STACK_A_DATA = [
+  { id: '5608', xlabel: '1', value: 47 },
+  { id: 'd556', xlabel: '2', value: 55 },
+  { id: 'e68a', xlabel: '3', value: 56 },
+  { id: 'd7c0', xlabel: '4', value: 15 },
+  { id: '4576', xlabel: '5', value: 78 }
+];
+
+export const AREA_REALTIME_STACK_B_DATA = [
+  { id: '775e', xlabel: '1', value: 83 },
+  { id: 'e537', xlabel: '2', value: 56 },
+  { id: '1151', xlabel: '3', value: 22 },
+  { id: 'a8c6', xlabel: '4', value: 60 },
+  { id: '8fc8', xlabel: '5', value: 21 }
+];
+
+export const AREA_REALTIME_SLIDE_A_DATA = [
+  { id: '909c', xlabel: '1', value: 61 },
+  { id: 'b126', xlabel: '2', value: 27 },
+  { id: '385d', xlabel: '3', value: 84 },
+  { id: '5d4d', xlabel: '4', value: 25 },
+  { id: '9784', xlabel: '5', value: 51 }
+];
+
+export const AREA_REALTIME_SLIDE_B_DATA = [
+  { id: '2bbd', xlabel: '1', value: 92 },
+  { id: '68b5', xlabel: '2', value: 55 },
+  { id: 'cb7d', xlabel: '3', value: 26 },
+  { id: '233e', xlabel: '4', value: 2 },
+  { id: 'ef42', xlabel: '5', value: 65 }
+];
+
+/**********************************************************************
+ * Bar 차트
+ **********************************************************************/
+export const BAR_A_DATA = [
+  { id: '80ff', xlabel: '2021', value: 33 },
+  { id: '84e8', xlabel: '2022', value: 19 },
+  { id: '3e1e', xlabel: '2023', value: 42 },
+  { id: 'f3ae', xlabel: '2024', value: 48 },
+  { id: '2c95', xlabel: '2025', value: 14 }
+];
+
+export const BAR_B_DATA = [
+  { id: '589d', xlabel: '2021', value: 61 },
+  { id: '89c4', xlabel: '2022', value: 66 },
+  { id: 'b7e3', xlabel: '2023', value: 87 },
+  { id: '6371', xlabel: '2024', value: 57 },
+  { id: '5356', xlabel: '2025', value: 72 }
+];
+
+export const BAR_REALTIME_STACK_A_DATA = [
+  { id: '1a37', xlabel: '1', value: 25 },
+  { id: 'ac94', xlabel: '2', value: 31 },
+  { id: '9d80', xlabel: '3', value: 81 },
+  { id: '7f21', xlabel: '4', value: 61 },
+  { id: '9540', xlabel: '5', value: 3 }
+];
+
+export const BAR_REALTIME_STACK_B_DATA = [
+  { id: '38ca', xlabel: '1', value: 37 },
+  { id: '7c28', xlabel: '2', value: 19 },
+  { id: 'c575', xlabel: '3', value: 19 },
+  { id: 'd066', xlabel: '4', value: 20 },
+  { id: 'c2d7', xlabel: '5', value: 11 }
+];
+
+export const BAR_REALTIME_SLIDE_A_DATA = [
+  { id: 'c710', xlabel: '1', value: 84 },
+  { id: '74f0', xlabel: '2', value: 4 },
+  { id: '3258', xlabel: '3', value: 28 },
+  { id: 'ea15', xlabel: '4', value: 22 },
+  { id: '7d03', xlabel: '5', value: 95 }
+];
+
+export const BAR_REALTIME_SLIDE_B_DATA = [
+  { id: '7b03', xlabel: '1', value: 74 },
+  { id: '6811', xlabel: '2', value: 99 },
+  { id: '8085', xlabel: '3', value: 100 },
+  { id: '797e', xlabel: '4', value: 59 },
+  { id: 'c994', xlabel: '5', value: 14 }
+];
+
+/**********************************************************************
+ * Bubble 차트
+ **********************************************************************/
+export const BUBBLE_A_DATA = [
+  { id: '86ab', xvalue: 60, yvalue: 32, rvalue: 17 },
+  { id: '18b2', xvalue: 21, yvalue: 96, rvalue: 18 },
+  { id: '7311', xvalue: 86, yvalue: 16, rvalue: 16 },
+  { id: '801e', xvalue: 100, yvalue: 22, rvalue: 12 },
+  { id: 'cc58', xvalue: 46, yvalue: 32, rvalue: 14 },
+  { id: '5694', xvalue: 20, yvalue: 19, rvalue: 6 },
+  { id: 'a9b0', xvalue: 36, yvalue: 77, rvalue: 6 },
+  { id: '1ff9', xvalue: 15, yvalue: 24, rvalue: 16 },
+  { id: '3c61', xvalue: 20, yvalue: 73, rvalue: 18 },
+  { id: 'ae74', xvalue: 56, yvalue: 35, rvalue: 18 }
+];
+
+export const BUBBLE_B_DATA = [
+  { id: '882a', xvalue: 24, yvalue: 40, rvalue: 15 },
+  { id: 'a0be', xvalue: 51, yvalue: 8, rvalue: 16 },
+  { id: 'db81', xvalue: 68, yvalue: 88, rvalue: 6 },
+  { id: '943a', xvalue: 67, yvalue: 83, rvalue: 11 },
+  { id: '9493', xvalue: 18, yvalue: 92, rvalue: 6 },
+  { id: 'c96c', xvalue: 54, yvalue: 41, rvalue: 6 },
+  { id: '4997', xvalue: 33, yvalue: 51, rvalue: 15 },
+  { id: '1a77', xvalue: 83, yvalue: 72, rvalue: 14 },
+  { id: '1cc6', xvalue: 98, yvalue: 6, rvalue: 12 },
+  { id: '693b', xvalue: 92, yvalue: 1, rvalue: 20 }
+];
+
+export const BUBBLE_REALTIME_A_DATA = [
+  { id: '02a4', xvalue: 48, yvalue: 22, rvalue: 11 },
+  { id: 'ede5', xvalue: 48, yvalue: 65, rvalue: 14 },
+  { id: '9fde', xvalue: 8, yvalue: 36, rvalue: 8 },
+  { id: '742a', xvalue: 48, yvalue: 15, rvalue: 16 },
+  { id: '9fca', xvalue: 25, yvalue: 36, rvalue: 17 },
+  { id: '2ba8', xvalue: 14, yvalue: 46, rvalue: 18 },
+  { id: '3d12', xvalue: 73, yvalue: 28, rvalue: 20 },
+  { id: '9b78', xvalue: 40, yvalue: 90, rvalue: 7 },
+  { id: 'f5d5', xvalue: 55, yvalue: 86, rvalue: 16 },
+  { id: '36ae', xvalue: 44, yvalue: 7, rvalue: 7 }
+];
+
+export const BUBBLE_REALTIME_B_DATA = [
+  { id: '2ad8', xvalue: 88, yvalue: 87, rvalue: 9 },
+  { id: '51bb', xvalue: 77, yvalue: 34, rvalue: 13 },
+  { id: '9360', xvalue: 82, yvalue: 39, rvalue: 15 },
+  { id: 'c832', xvalue: 64, yvalue: 35, rvalue: 11 },
+  { id: '36ae', xvalue: 48, yvalue: 100, rvalue: 17 },
+  { id: '2a50', xvalue: 12, yvalue: 35, rvalue: 6 },
+  { id: '67d0', xvalue: 43, yvalue: 88, rvalue: 15 },
+  { id: '673a', xvalue: 59, yvalue: 7, rvalue: 19 },
+  { id: '4273', xvalue: 30, yvalue: 34, rvalue: 12 },
+  { id: 'ebc6', xvalue: 82, yvalue: 36, rvalue: 17 }
+];
+
+/**********************************************************************
+ * Doughnut 차트
+ **********************************************************************/
+export const DOUGHNUT_DATA = [
+  { id: '0318', name: 'A', value: 57 },
+  { id: '3c3f', name: 'B', value: 30 },
+  { id: 'c15e', name: 'C', value: 97 },
+  { id: '2349', name: 'D', value: 74 },
+  { id: 'e2be', name: 'E', value: 15 }
+];
+
+export const DOUGHNUT_REALTIME_DATA = [
+  { id: 'e9d7', name: 'A', value: 54 },
+  { id: 'bf21', name: 'B', value: 25 },
+  { id: 'b5ca', name: 'C', value: 92 },
+  { id: '9b9c', name: 'D', value: 75 },
+  { id: 'c35d', name: 'E', value: 67 }
+];
+
+/**********************************************************************
+ * Line 차트
+ **********************************************************************/
+export const LINE_A_DATA = [
+  { id: '3af7', xlabel: '2021', value: 73 },
+  { id: '9f06', xlabel: '2022', value: 25 },
+  { id: '87b6', xlabel: '2023', value: 75 },
+  { id: '268f', xlabel: '2024', value: 55 },
+  { id: '06e1', xlabel: '2025', value: 34 }
+];
+
+export const LINE_B_DATA = [
+  { id: '5a5e', xlabel: '2021', value: 92 },
+  { id: '7ca0', xlabel: '2022', value: 35 },
+  { id: '6963', xlabel: '2023', value: 48 },
+  { id: 'acab', xlabel: '2024', value: 45 },
+  { id: '5a25', xlabel: '2025', value: 44 }
+];
+
+export const LINE_REALTIME_STACK_A_DATA = [
+  { id: '0e28', xlabel: '1', value: 89 },
+  { id: '60bc', xlabel: '2', value: 61 },
+  { id: '49ff', xlabel: '3', value: 18 },
+  { id: 'c72b', xlabel: '4', value: 99 },
+  { id: 'bf9a', xlabel: '5', value: 17 }
+];
+
+export const LINE_REALTIME_STACK_B_DATA = [
+  { id: '802c', xlabel: '1', value: 48 },
+  { id: 'c732', xlabel: '2', value: 29 },
+  { id: 'd1b7', xlabel: '3', value: 72 },
+  { id: '61da', xlabel: '4', value: 25 },
+  { id: 'c86d', xlabel: '5', value: 14 }
+];
+
+export const LINE_REALTIME_SLIDE_A_DATA = [
+  { id: '7047', xlabel: '1', value: 27 },
+  { id: '5663', xlabel: '2', value: 8 },
+  { id: '60fb', xlabel: '3', value: 26 },
+  { id: '519a', xlabel: '4', value: 32 },
+  { id: '29c4', xlabel: '5', value: 69 }
+];
+
+export const LINE_REALTIME_SLIDE_B_DATA = [
+  { id: '0988', xlabel: '1', value: 8 },
+  { id: '47b0', xlabel: '2', value: 62 },
+  { id: 'd927', xlabel: '3', value: 33 },
+  { id: '8ff4', xlabel: '4', value: 27 },
+  { id: '9924', xlabel: '5', value: 28 }
+];
+
+/**********************************************************************
+ * Pie 차트
+ **********************************************************************/
+export const PIE_DATA = [
+  { id: '9277', name: 'A', value: 44 },
+  { id: '2929', name: 'B', value: 82 },
+  { id: 'e334', name: 'C', value: 94 },
+  { id: '8296', name: 'D', value: 11 },
+  { id: 'deac', name: 'E', value: 82 }
+];
+
+export const PIE_REALTIME_DATA = [
+  { id: 'cdfe', name: 'A', value: 67 },
+  { id: '7774', name: 'B', value: 88 },
+  { id: '58b3', name: 'C', value: 40 },
+  { id: '14b3', name: 'D', value: 5 },
+  { id: 'effe', name: 'E', value: 35 }
+];
+
+/**********************************************************************
+ * Polar 차트
+ **********************************************************************/
+export const POLAR_DATA = [
+  { id: '0318', name: 'A', value: 57 },
+  { id: '3c3f', name: 'B', value: 30 },
+  { id: 'c15e', name: 'C', value: 97 },
+  { id: '2349', name: 'D', value: 74 },
+  { id: 'e2be', name: 'E', value: 15 }
+];
+
+export const POLAR_REALTIME_DATA = [
+  { id: 'e9d7', name: 'A', value: 54 },
+  { id: 'bf21', name: 'B', value: 25 },
+  { id: 'b5ca', name: 'C', value: 92 },
+  { id: '9b9c', name: 'D', value: 75 },
+  { id: 'c35d', name: 'E', value: 67 }
+];
+
+/**********************************************************************
+ * Radar 차트
+ **********************************************************************/
+export const RADAR_A_DATA = [
+  { id: 'e613', category: '주의력', value: 65 },
+  { id: '2bbd', category: '사고력', value: 91 },
+  { id: '51c9', category: '창의력', value: 25 },
+  { id: '3858', category: '기억력', value: 2 },
+  { id: '572d', category: '판단력', value: 48 }
+];
+
+export const RADAR_B_DATA = [
+  { id: '89a8', category: '주의력', value: 93 },
+  { id: 'bd9a', category: '사고력', value: 53 },
+  { id: '143e', category: '창의력', value: 52 },
+  { id: '2882', category: '기억력', value: 65 },
+  { id: '4fbb', category: '판단력', value: 78 }
+];
+
+export const RADAR_REALTIME_A_DATA = [
+  { id: 'e613', category: '주의력', value: 36 },
+  { id: '2bbd', category: '사고력', value: 78 },
+  { id: '51c9', category: '창의력', value: 28 },
+  { id: '3858', category: '기억력', value: 92 },
+  { id: '572d', category: '판단력', value: 80 }
+];
+
+export const RADAR_REALTIME_B_DATA = [
+  { id: '89a8', category: '주의력', value: 82 },
+  { id: 'bd9a', category: '사고력', value: 49 },
+  { id: '143e', category: '창의력', value: 89 },
+  { id: '2882', category: '기억력', value: 31 },
+  { id: '4fbb', category: '판단력', value: 81 }
+];
+
+/**********************************************************************
+ * Scatter 차트
+ **********************************************************************/
+export const SCATTER_A_DATA = [
+  { id: 'a966', xvalue: 22, yvalue: 29 },
+  { id: 'aa66', xvalue: 47, yvalue: 57 },
+  { id: '5988', xvalue: 51, yvalue: 66 },
+  { id: '76d1', xvalue: 85, yvalue: 76 },
+  { id: '6d9c', xvalue: 54, yvalue: 35 },
+  { id: '12e0', xvalue: 9, yvalue: 50 },
+  { id: 'c099', xvalue: 13, yvalue: 3 },
+  { id: 'f124', xvalue: 37, yvalue: 68 },
+  { id: '6e0c', xvalue: 68, yvalue: 36 },
+  { id: '5d45', xvalue: 75, yvalue: 14 }
+];
+
+export const SCATTER_B_DATA = [
+  { id: 'e38e', xvalue: 40, yvalue: 66 },
+  { id: 'e41c', xvalue: 60, yvalue: 32 },
+  { id: '1929', xvalue: 86, yvalue: 7 },
+  { id: '032a', xvalue: 44, yvalue: 95 },
+  { id: '4b11', xvalue: 36, yvalue: 10 },
+  { id: 'bca8', xvalue: 83, yvalue: 58 },
+  { id: 'c4dd', xvalue: 73, yvalue: 94 },
+  { id: '99ce', xvalue: 39, yvalue: 74 },
+  { id: '87bb', xvalue: 57, yvalue: 52 },
+  { id: '570d', xvalue: 3, yvalue: 22 }
+];
+
+export const SCATTER_REALTIME_A_DATA = [
+  { id: '8645', xvalue: 79, yvalue: 34 },
+  { id: '98fe', xvalue: 3, yvalue: 69 },
+  { id: 'b7d1', xvalue: 16, yvalue: 71 },
+  { id: '8b41', xvalue: 30, yvalue: 24 },
+  { id: '5f22', xvalue: 31, yvalue: 96 },
+  { id: 'd516', xvalue: 7, yvalue: 46 },
+  { id: '8bbe', xvalue: 70, yvalue: 18 },
+  { id: '812b', xvalue: 87, yvalue: 31 },
+  { id: '616e', xvalue: 98, yvalue: 24 },
+  { id: 'b9be', xvalue: 28, yvalue: 79 }
+];
+
+export const SCATTER_REALTIME_B_DATA = [
+  { id: '38c1', xvalue: 54, yvalue: 41 },
+  { id: '124a', xvalue: 97, yvalue: 94 },
+  { id: '42f3', xvalue: 62, yvalue: 28 },
+  { id: '2815', xvalue: 37, yvalue: 68 },
+  { id: '6e00', xvalue: 46, yvalue: 66 },
+  { id: '694b', xvalue: 81, yvalue: 86 },
+  { id: 'f864', xvalue: 15, yvalue: 48 },
+  { id: 'e257', xvalue: 24, yvalue: 72 },
+  { id: '860e', xvalue: 24, yvalue: 8 },
+  { id: '5953', xvalue: 57, yvalue: 20 }
+];
