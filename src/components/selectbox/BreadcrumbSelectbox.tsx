@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa6';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 type BreadcrumbSelectboxProps = {
   options: string[];
@@ -9,7 +9,6 @@ type BreadcrumbSelectboxProps = {
 
 const BreadcrumbSelectbox = ({ options }: BreadcrumbSelectboxProps) => {
   const { pathname } = useLocation();
-  const navigate = useNavigate();
 
   const selectboxRef = useRef<HTMLDivElement>(null);
 
@@ -34,7 +33,7 @@ const BreadcrumbSelectbox = ({ options }: BreadcrumbSelectboxProps) => {
   const handleSelectValue = (value: string) => {
     setSelected(value);
     setIsOpenOptions(false);
-    navigate(`/${value.replace(' + ', '')}`);
+    window.location.href = `/${value.replace(' + ', '')}`;
   };
 
   return (
