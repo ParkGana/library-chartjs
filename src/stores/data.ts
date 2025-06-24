@@ -52,6 +52,14 @@ export const AREA_REALTIME_SLIDE_B_DATA = [
 /**********************************************************************
  * Bar 차트
  **********************************************************************/
+export const BAR_DATA = [
+  { id: '309c', name: 'A', value: 38 },
+  { id: 'abb5', name: 'B', value: 67 },
+  { id: 'cd34', name: 'C', value: 35 },
+  { id: '0ffb', name: 'D', value: 74 },
+  { id: '7836', name: 'E', value: 73 }
+];
+
 export const BAR_A_DATA = [
   { id: '80ff', xlabel: '2021', value: 33 },
   { id: '84e8', xlabel: '2022', value: 19 },
@@ -66,6 +74,14 @@ export const BAR_B_DATA = [
   { id: 'b7e3', xlabel: '2023', value: 87 },
   { id: '6371', xlabel: '2024', value: 57 },
   { id: '5356', xlabel: '2025', value: 72 }
+];
+
+export const BAR_REALTIME_DATA = [
+  { id: '309c', name: 'A', value: 32 },
+  { id: 'abb5', name: 'B', value: 47 },
+  { id: 'cd34', name: 'C', value: 4 },
+  { id: '0ffb', name: 'D', value: 96 },
+  { id: '7836', name: 'E', value: 22 }
 ];
 
 export const BAR_REALTIME_STACK_A_DATA = [

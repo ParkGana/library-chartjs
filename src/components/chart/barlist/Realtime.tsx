@@ -2,34 +2,28 @@ import { BarElement, Chart, Legend, Tooltip } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { useEffect, useState } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useBarList } from '../../../hooks/useBarList';
 import { generateBarListChartData } from '../../../utils/generateChartData';
 import { generateBarListChartOptions } from '../../../utils/generateChartOptions';
 import clsx from 'clsx';
+import { useBarListStore } from '../../../stores/barlistStore';
 
 Chart.register(BarElement, Tooltip, Legend);
 
 const RealtimeBarList = () => {
-  const {
-    fetchBarListChartRealtimeDataQuery: { data, isPending, isError },
-    updateBarListChartRealtimeDataMutation
-  } = useBarList();
+  const { barRealtime, updateBarRealtime } = useBarListStore();
+
+  const data = barRealtime;
 
   const [totalValue, setTotalValue] = useState<number>(0);
 
   useEffect(() => {
-    if (data) {
-      setTotalValue(data.map(({ value }) => value).reduce((acc, cur) => acc + cur, 0));
+    setTotalValue(data.map(({ value }) => value).reduce((acc, cur) => acc + cur, 0));
 
-      const interval = setInterval(() => {
-        updateBarListChartRealtimeDataMutation.mutate(data);
-      }, 3000);
-      return () => clearInterval(interval);
-    }
-  }, [data]);
-
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+    const interval = setInterval(() => {
+      updateBarRealtime();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const chartData = generateBarListChartData(data);
   const chartOptions = generateBarListChartOptions();

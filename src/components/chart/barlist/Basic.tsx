@@ -1,20 +1,17 @@
 import { BarElement, Chart, Legend, Tooltip } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import ChartContainer from '../../layout/ChartContainer';
-import { useBarList } from '../../../hooks/useBarList';
 import { generateBarListChartData } from '../../../utils/generateChartData';
 import { generateBarListChartOptions } from '../../../utils/generateChartOptions';
 import clsx from 'clsx';
+import { useBarListStore } from '../../../stores/barlistStore';
 
 Chart.register(BarElement, Tooltip, Legend);
 
 const BasicBarList = () => {
-  const {
-    fetchBarListChartDataQuery: { data, isPending, isError }
-  } = useBarList();
+  const { bar } = useBarListStore();
 
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
+  const data = bar;
 
   const totalValue = data.map(({ value }) => value).reduce((acc, cur) => acc + cur, 0);
   const chartData = generateBarListChartData(data);
