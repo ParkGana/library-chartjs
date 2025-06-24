@@ -2,24 +2,24 @@ import { PointElement, Chart, Legend, LinearScale, Tooltip } from 'chart.js';
 import { Scatter } from 'react-chartjs-2';
 import { useState } from 'react';
 import ChartContainer from '../../layout/ChartContainer';
-import { useScatter } from '../../../hooks/useScatter';
 import { generateScatterChartData } from '../../../utils/generateChartData';
 import { generateScatterChartOptions } from '../../../utils/generateChartOptions';
 import VerticalRangebar from '../../rangebar/VerticalRangebar';
 import HorizontalRangebar from '../../rangebar/HorizontalRangebar';
+import { useScatterStore } from '../../../stores/scatterStore';
 
 Chart.register(LinearScale, PointElement, Tooltip, Legend);
 
 const RangeScatter = () => {
-  const {
-    fetchScatterChartDataQuery: { data, isPending, isError }
-  } = useScatter();
+  const { scatterA, scatterB } = useScatterStore();
+
+  const data = [
+    { name: 'A', data: scatterA },
+    { name: 'B', data: scatterB }
+  ];
 
   const [rangeX, setRangeX] = useState({ min: 0, max: 100 });
   const [rangeY, setRangeY] = useState({ min: 0, max: 100 });
-
-  if (isPending) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
 
   const chartData = generateScatterChartData(data);
   const chartOptions = generateScatterChartOptions({

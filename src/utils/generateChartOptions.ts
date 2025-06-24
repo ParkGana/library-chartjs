@@ -191,14 +191,14 @@ export const generateScatterChartOptions = ({ minX, maxX, minY, maxY }: ScatterC
       min: minX ?? 0,
       max: maxX ?? 100,
       ticks: {
-        stepSize: 20
+        stepSize: (maxX ?? 100) / 5
       }
     },
     y: {
       min: minY ?? 0,
       max: maxY ?? 100,
       ticks: {
-        stepSize: 20
+        stepSize: (maxY ?? 100) / 5
       }
     }
   },
